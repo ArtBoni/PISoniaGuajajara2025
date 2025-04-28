@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class AngryEnemy : MonoBehaviour
 {
     [SerializeField] Transform target;
     [SerializeField] float speed;
