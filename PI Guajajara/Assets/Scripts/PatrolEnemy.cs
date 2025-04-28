@@ -1,21 +1,59 @@
 using UnityEngine;
+using System.Collections;
 
 public class PatrolEnemy : MonoBehaviour
 {
-    [SerializeField] float speed;
-    [SerializeField] Transform targetPatrol;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+   [SerializeField] Transform[] patrolPoints;
+   [SerializeField] float moveSpeed, reachDistance, waitTimeAtPoint;
+    
+    int currentPointIndex = 0;   
+    Rigidbody2D rb;
+    bool isWaiting = false;     
+
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
+
+        if (patrolPoints.Length > 0)
+        {
+            transform.position = patrolPoints[currentPointIndex].position;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if(targetPatrol != null)
+        if (!isWaiting)
         {
-            Vector2 moveInPatrol = (targetPatrol.position - transform.position).normalized;
+            Patrol();
         }
+    }
+
+    void Patrol()
+    {
+        if (patrolPoints.Length == 0) return;
+
+        Vector2 direction = (patrolPoints[currentPointIndex].position - transform.position).normalized;
+        rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
+
+        float distance = Vector2.Distance(transform.position, patrolPoints[currentPointIndex].position);
+        if (distance <= reachDistance)
+        {
+            StartCoroutine(WaitBeforeNextPoint());
+        }
+    }
+
+    IEnumerator WaitBeforeNextPoint()
+    {
+        isWaiting = true;
+
+        yield return new WaitForSeconds(waitTimeAtPoint);
+
+        currentPointIndex++;
+        if (currentPointIndex >= patrolPoints.Length)
+        {
+            currentPointIndex = 0;
+        }
+
+        isWaiting = false;
     }
 }
