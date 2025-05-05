@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DestroyButton : MonoBehaviour
 {
-    [SerializeField] GameObject object;
+    [SerializeField] GameObject button;
     SpriteRenderer spriteRenderer;
     [SerializeField] Sprite buttonUnpressed;
     [SerializeField] Sprite buttonPressed;
@@ -19,9 +19,9 @@ public class DestroyButton : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag(tagg))
+        if (collision.gameObject.CompareTag(tag))
         {
-            object.SetActive(false);
+            button.SetActive(false);
         }
         spriteRenderer.sprite = buttonPressed;
     }
