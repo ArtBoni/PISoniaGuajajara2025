@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public abstract class NPCController : MonoBehaviour
 {
-    [SerializeField] RawImage NpcFace;
+    public UnityEvent OnTalk;
+    [SerializeField] Transform npcPosition;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,12 +21,16 @@ public abstract class NPCController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        StartDialog();
+        if (collision.gameObject.Equals("Player"))
+        {
+            StartDialog();
+        }
+        
     }
 
 
     public void StartDialog()
     {
-
+        OnTalk.Invoke();
     }
 }

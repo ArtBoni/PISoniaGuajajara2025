@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9eed998b27ddff4daea7ab49327738e, type: 3}
   m_Name: DialogueData
   m_EditorClassIdentifier: 
-  talkScript: []
+  talkScript:
+  - name: Bernardo
+    text: Oi, boa tarde
+  - name: Bonelli
+    text: 
