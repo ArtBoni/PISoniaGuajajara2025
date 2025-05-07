@@ -56,7 +56,11 @@ public class DialogueSystem : MonoBehaviour
         }
         dialogueUI.SetName(dialogueData.talkScript[currentText].name);
         typeTxt.fullText = dialogueData.talkScript[currentText++].text;
-        if (currentText == dialogueData.talkScript.Count) finishedTxt = true;
+        if (currentText == dialogueData.talkScript.Count) 
+        {
+            finishedTxt = true;
+        }
+       
         typeTxt.StartTyping();
         states = States.TYPING;
     }

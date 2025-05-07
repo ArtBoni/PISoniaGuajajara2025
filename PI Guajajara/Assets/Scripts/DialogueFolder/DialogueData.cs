@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
 
-[Serializable]
+[System.Serializable]
 public struct Dialogue
 {
     public string name;

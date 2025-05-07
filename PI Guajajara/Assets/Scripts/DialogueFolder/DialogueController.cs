@@ -19,7 +19,7 @@ public class DialogueController : MonoBehaviour
     }
 
 
-    public IEnumerator StartTyping()
+   public IEnumerator StartTyping()
     {
         textObj.text = fullText;
         textObj.maxVisibleCharacters = 0;

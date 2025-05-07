@@ -21,10 +21,15 @@ public abstract class NPCController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Mathf.Abs(transform.position.x - npcPosition.position.x) < 2.0f)
         {
-            StartDialog();
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                StartDialog();
+                print("Funcionou");
+            }
         }
+        
         
     }
 

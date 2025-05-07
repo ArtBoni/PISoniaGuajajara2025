@@ -2,7 +2,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))] 
 [RequireComponent(typeof(Rigidbody2D))] 
-public class PlayerMov : MonoBehaviour
+public class PlayerMov : PlayerDialogue
 {
     [SerializeField] float  horizontal, vertical, speed;
     Rigidbody2D rb;
@@ -24,6 +24,7 @@ public class PlayerMov : MonoBehaviour
             float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         }
+        
     }
 
     private void FixedUpdate()
