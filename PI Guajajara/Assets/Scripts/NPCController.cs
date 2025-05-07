@@ -21,7 +21,7 @@ public abstract class NPCController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.Equals("Player"))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             StartDialog();
         }
