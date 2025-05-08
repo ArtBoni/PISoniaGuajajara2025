@@ -2,7 +2,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))] 
 [RequireComponent(typeof(Rigidbody2D))] 
-public class PlayerMov : PlayerDialogue
+public class PlayerMov : MonoBehaviour
 {
     [SerializeField] float speed;
 

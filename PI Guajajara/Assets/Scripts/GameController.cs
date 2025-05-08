@@ -12,6 +12,8 @@ public class GameController : MonoBehaviour
     [SerializeField]Dialoguing _gameState = Dialoguing.PLAYING;
     public static GameController instance;
     [SerializeField] UnityEvent OnPlaying, OnDialogue;
+
+    NPCController npcController;
     public Dialoguing State { get => _gameState; set => _gameState = value; }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

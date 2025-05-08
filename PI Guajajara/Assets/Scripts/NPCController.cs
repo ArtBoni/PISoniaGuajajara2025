@@ -7,10 +7,12 @@ public abstract class NPCController : MonoBehaviour
     public UnityEvent OnTalk;
     [SerializeField] Transform playerPosition;
 
+    DialogueController dialogueController;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        dialogueController = GetComponent<DialogueController>();
     }
 
     // Update is called once per frame
@@ -25,7 +27,7 @@ public abstract class NPCController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                StartDialog();
+                OnTalk.AddListener(StartDialogue); 
                 print("Funcionou");
             }
         }
@@ -34,8 +36,8 @@ public abstract class NPCController : MonoBehaviour
     }
 
 
-    public void StartDialog()
+    public void StartDialogue()
     {
-        
+      GameController.instance.gameObject.SetActive(true);   
     }
 }
