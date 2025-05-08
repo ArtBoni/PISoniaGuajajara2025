@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public abstract class NPCController : MonoBehaviour
 {
     public UnityEvent OnTalk;
-    [SerializeField] Transform npcPosition;
+    [SerializeField] Transform playerPosition;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,7 +21,7 @@ public abstract class NPCController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (Mathf.Abs(transform.position.x - npcPosition.position.x) < 2.0f)
+        if (Mathf.Abs(transform.position.x - playerPosition.position.x) < 2.0f)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -36,6 +36,6 @@ public abstract class NPCController : MonoBehaviour
 
     public void StartDialog()
     {
-        OnTalk.Invoke();
+        
     }
 }

@@ -4,7 +4,9 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))] 
 public class PlayerMov : PlayerDialogue
 {
-    [SerializeField] float  horizontal, vertical, speed;
+    [SerializeField] float speed;
+
+    float horizontal, vertical;
     Rigidbody2D rb;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

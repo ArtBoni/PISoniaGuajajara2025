@@ -12,7 +12,7 @@ public class DialogueSystem : MonoBehaviour
 {
     public DialogueData dialogueData;
 
-    int currentText = 0;
+    int currentText;
     bool finishedTxt = false;
     
     DialogueController typeTxt;

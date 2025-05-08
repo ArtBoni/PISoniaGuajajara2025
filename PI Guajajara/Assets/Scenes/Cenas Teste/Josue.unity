@@ -182,9 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a7911495df3bca429ccc8b42458c02f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcPosition: {fileID: 0}
-  horizontal: 0
-  vertical: 0
+  npcPosition: {fileID: 2021379214}
   speed: 5
 --- !u!50 &142777514
 Rigidbody2D:
@@ -1047,7 +1045,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1697017737
 Transform:
   m_ObjectHideFlags: 0
@@ -1078,6 +1076,7 @@ GameObject:
   - component: {fileID: 2021379214}
   - component: {fileID: 2021379213}
   - component: {fileID: 2021379215}
+  - component: {fileID: 2021379216}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -1201,6 +1200,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2021379216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021379212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 637bfa046c2a4cf4bb260d0dc58e1c87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnTalk:
+    m_PersistentCalls:
+      m_Calls: []
+  playerPosition: {fileID: 142777517}
 --- !u!1 &2072816185
 GameObject:
   m_ObjectHideFlags: 0
