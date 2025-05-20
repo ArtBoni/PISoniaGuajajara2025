@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 
-public class TalkScript : MonoBehaviour
+public abstract class TalkScript : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
 
