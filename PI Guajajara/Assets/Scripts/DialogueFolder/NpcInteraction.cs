@@ -1,11 +1,10 @@
 using UnityEngine;
+using UnityEngine.Events;
 
-public enum Dialoguing
-{
-    TALKING, PLAYING
-}
+
 public class NpcInteraction : TalkScript
 {
+    [SerializeField] UnityEvent OnDialogueStart;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
