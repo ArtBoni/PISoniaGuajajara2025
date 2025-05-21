@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 
-public abstract class TalkScript : MonoBehaviour
+public class TalkScript : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
 
@@ -11,6 +11,7 @@ public abstract class TalkScript : MonoBehaviour
     public float textSpeed;
 
     int index;
+    bool isTyping = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,14 +24,16 @@ public abstract class TalkScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (textComponent.text == lines[index])
-            {
-                NextLine();
-            }
-            else 
+            
+            if(isTyping) 
             {
                 StopAllCoroutines();
                 textComponent.text = lines[index];
+                isTyping = false;
+            }
+            else
+            {
+                NextLine();
             }
         }
     }
@@ -43,11 +46,16 @@ public abstract class TalkScript : MonoBehaviour
 
     IEnumerator TypeLine()
     {
+        isTyping = true;
+        textComponent.text = string.Empty;
         foreach (char c in lines[index].ToCharArray())
         {
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
+        isTyping = false;
+        
+
     }
 
     void NextLine()
@@ -61,7 +69,8 @@ public abstract class TalkScript : MonoBehaviour
         else
         {
             gameObject.SetActive(false);
-        }    
+        }   
+        
     }
 }
 

@@ -688,13 +688,14 @@ GameObject:
   - component: {fileID: 795191790}
   - component: {fileID: 795191793}
   - component: {fileID: 795191792}
+  - component: {fileID: 795191794}
   m_Layer: 5
   m_Name: DialogueBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &795191790
 RectTransform:
   m_ObjectHideFlags: 0
@@ -753,6 +754,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 795191789}
   m_CullTransparentMesh: 1
+--- !u!114 &795191794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795191789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcb4d72b572a77e4aa25a3a6eef35852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 966336471}
+  lines:
+  - Oi
+  - "Como vai meu par\xE7eiro?"
+  - Espero que vai bem
+  textSpeed: 0.02
 --- !u!1 &966336469
 GameObject:
   m_ObjectHideFlags: 0
