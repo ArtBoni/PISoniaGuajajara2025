@@ -688,7 +688,6 @@ GameObject:
   - component: {fileID: 795191790}
   - component: {fileID: 795191793}
   - component: {fileID: 795191792}
-  - component: {fileID: 795191794}
   m_Layer: 5
   m_Name: DialogueBox
   m_TagString: Untagged
@@ -754,24 +753,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 795191789}
   m_CullTransparentMesh: 1
---- !u!114 &795191794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 795191789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcb4d72b572a77e4aa25a3a6eef35852, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textComponent: {fileID: 966336471}
-  lines:
-  - Oi
-  - "Como vai meu par\xE7eiro?"
-  - Espero que vai bem
-  textSpeed: 0.02
 --- !u!1 &966336469
 GameObject:
   m_ObjectHideFlags: 0
@@ -1066,6 +1047,7 @@ GameObject:
   - component: {fileID: 2021379214}
   - component: {fileID: 2021379213}
   - component: {fileID: 2021379215}
+  - component: {fileID: 2021379216}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -1177,7 +1159,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.02140522, y: 0.0214051}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1187,8 +1169,26 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.2843122, y: 2.241502}
   m_EdgeRadius: 0
+--- !u!114 &2021379216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021379212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eb2f5333eb66b4448e7102cbc1f19f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 966336471}
+  lines:
+  - Como vai
+  - "N\xE3o temos muito tempo"
+  - "V\xE1 resolver os desafios que o aguardar\xE3o mais adiante..."
+  textSpeed: 0.02
 --- !u!1 &2072816185
 GameObject:
   m_ObjectHideFlags: 0
