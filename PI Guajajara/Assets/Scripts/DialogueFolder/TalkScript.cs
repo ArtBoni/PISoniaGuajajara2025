@@ -22,7 +22,7 @@ public abstract class TalkScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {            
             if(isTyping) 
             {
@@ -37,7 +37,7 @@ public abstract class TalkScript : MonoBehaviour
         }
     }
 
-   public  void StartDialogue()
+    void StartDialogue()
     {
         index = 0;
         StartCoroutine(TypeLine());
