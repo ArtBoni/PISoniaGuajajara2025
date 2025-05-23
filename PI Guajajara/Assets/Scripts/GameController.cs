@@ -8,10 +8,7 @@ public class GameController : MonoBehaviour
 {
     
     public static GameController instance;
-    [SerializeField] UnityEvent OnPlaying, OnDialogue;
-        
-   
-
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
