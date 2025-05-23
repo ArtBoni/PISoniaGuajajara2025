@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dirtpath_tiles_0: -7949628201706799691
+      dirtpath_tiles_1: -758575666514141374
+      dirtpath_tiles_2: -5533932961807500339
+      dirtpath_tiles_3: 3907838923930945673
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
