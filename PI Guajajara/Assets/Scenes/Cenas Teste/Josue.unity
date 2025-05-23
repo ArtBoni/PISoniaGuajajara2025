@@ -488,12 +488,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93137c585830d7f43b0211d38fc77340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPlaying:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDialogue:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!4 &320881534
 Transform:
   m_ObjectHideFlags: 0
@@ -694,7 +688,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &795191790
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1046,8 +1040,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2021379214}
   - component: {fileID: 2021379213}
-  - component: {fileID: 2021379215}
   - component: {fileID: 2021379216}
+  - component: {fileID: 2021379217}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -1125,7 +1119,40 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &2021379215
+--- !u!114 &2021379216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021379212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eb2f5333eb66b4448e7102cbc1f19f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 966336471}
+  lines:
+  - 
+  - "N\xE3o temos muito tempo"
+  - "V\xE1 resolver os desafios que o aguardar\xE3o mais adiante..."
+  textSpeed: 0.02
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 795191789}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!61 &2021379217
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1155,11 +1182,11 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0004518032, y: -0.029594958}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1169,26 +1196,8 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.1331649, y: 1.1194979}
+  m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
---- !u!114 &2021379216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2021379212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4eb2f5333eb66b4448e7102cbc1f19f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textComponent: {fileID: 966336471}
-  lines:
-  - Como vai
-  - "N\xE3o temos muito tempo"
-  - "V\xE1 resolver os desafios que o aguardar\xE3o mais adiante..."
-  textSpeed: 0.02
 --- !u!1 &2072816185
 GameObject:
   m_ObjectHideFlags: 0
