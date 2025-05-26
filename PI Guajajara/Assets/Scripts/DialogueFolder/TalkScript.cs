@@ -12,8 +12,7 @@ public abstract class TalkScript : MonoBehaviour
 
     int index;
     bool isTyping = false;
-    [SerializeField] GameObject dialogueBox; 
-
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
