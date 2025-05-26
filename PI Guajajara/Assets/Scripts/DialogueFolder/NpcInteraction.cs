@@ -2,17 +2,30 @@ using UnityEngine;
 using UnityEngine.Events;
 
 
-public class NpcInteraction : TalkScript, IInteractable
+public class NpcInteraction : TalkScript
 {
+    [SerializeField] GameObject dialogueBox;
+    [SerializeField] private bool playerInRange = false;
     [SerializeField] UnityEvent OnInteract;
-    public void Interact()
+    
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Collider2D npcCollider = GetComponent<Collider2D>();
-        if (npcCollider != null)
-        {
-            OnInteract.Invoke();
+        if(collision.gameObject.name == "Player" && Input.GetKeyDown(KeyCode.Mouse0))
+        {            
+            playerInRange = true;
+            dialogueBox.SetActive(true);
         }
+        
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {        
+        playerInRange = false;
+        dialogueBox.SetActive(false);
+    }
+
+
+
 }
 
 
