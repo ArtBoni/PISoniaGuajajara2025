@@ -5,13 +5,14 @@ using TMPro;
 
 public abstract class TalkScript : MonoBehaviour
 {
-    public TextMeshProUGUI textComponent;
+    [SerializeField] TextMeshProUGUI textComponent;
 
-    public string[] lines;
-    public float textSpeed;
+    [SerializeField] string[] lines;
+    [SerializeField] float textSpeed;
 
     int index;
     bool isTyping = false;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,7 +23,7 @@ public abstract class TalkScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.E))
         {            
             if(isTyping) 
             {
@@ -67,9 +68,10 @@ public abstract class TalkScript : MonoBehaviour
         }
         else
         {
-            gameObject.SetActive(false);
         }   
         
     }
+
+    
 }
 
