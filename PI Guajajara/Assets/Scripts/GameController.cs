@@ -13,18 +13,5 @@ public class GameController : MonoBehaviour
     void Awake()
     {
         instance = this;
-    }
-
-    private void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-   
+    }     
 }
