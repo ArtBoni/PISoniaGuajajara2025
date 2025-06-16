@@ -2,5 +2,5 @@
 
 public interface IDialogue 
 {
-    public void StartDialgue();
+    public void Dialogue();
 }
