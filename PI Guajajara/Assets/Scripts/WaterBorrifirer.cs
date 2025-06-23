@@ -1,16 +1,23 @@
+using System.Collections;
 using UnityEngine;
 
 public class WaterBorrifirer : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] GameObject water;
+    [SerializeField] Transform waterPos;
+
+
+    private void Update()
     {
-        
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Shoot();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void Shoot()
     {
-        
+        GameObject bullet = Instantiate(water, waterPos.position, waterPos.rotation);
     }
+
 }
