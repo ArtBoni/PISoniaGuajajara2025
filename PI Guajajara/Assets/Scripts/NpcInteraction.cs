@@ -12,7 +12,7 @@ public class NpcInteraction : TalkScript
     {
         if(collision.gameObject)
         {
-            OnInteract.Invoke();
+           OnInteract.Invoke();
         }
         
     }
