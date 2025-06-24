@@ -1131,23 +1131,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1697017737}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1605362282 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2983469242067755660, guid: 47fd06071f1f96c4497ceebdeb8e2f79, type: 3}
-  m_PrefabInstance: {fileID: 1970308215}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1605362287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1605362282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4aa1567a62ac214f87c1e473d175e85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1660835486
 GameObject:
   m_ObjectHideFlags: 0
@@ -1319,10 +1302,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2365749000658563399, guid: 47fd06071f1f96c4497ceebdeb8e2f79, type: 3}
-      propertyPath: speed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2365749000658563399, guid: 47fd06071f1f96c4497ceebdeb8e2f79, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 142777517}
@@ -1333,10 +1312,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2983469242067755660, guid: 47fd06071f1f96c4497ceebdeb8e2f79, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1605362287}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47fd06071f1f96c4497ceebdeb8e2f79, type: 3}
 --- !u!1 &2072816185
 GameObject:
@@ -1421,6 +1397,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4513751904982689787, guid: b3743957935e4424cacdd1ea8dcb9430, type: 3}
+      propertyPath: target.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513751904982689787, guid: b3743957935e4424cacdd1ea8dcb9430, type: 3}
+      propertyPath: 'target.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1238803856289307183, guid: 47fd06071f1f96c4497ceebdeb8e2f79, type: 3}
+    - target: {fileID: 4513751904982689787, guid: b3743957935e4424cacdd1ea8dcb9430, type: 3}
+      propertyPath: 'target.Array.data[1]'
+      value: 
+      objectReference: {fileID: 4352916236114191419, guid: dca61404363c62b458d7b0e55ddadc8a, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

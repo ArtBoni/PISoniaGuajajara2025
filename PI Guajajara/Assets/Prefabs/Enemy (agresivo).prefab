@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3079583196650599296}
   - component: {fileID: 5033459629869320491}
   - component: {fileID: 2365749000658563399}
+  - component: {fileID: 8133858864654852108}
   m_Layer: 0
   m_Name: Enemy (agresivo)
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2983469242067755660}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.46, y: 2.3, z: 0}
+  m_LocalPosition: {x: 1.5444269, y: 2.0187821, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -148,4 +149,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 4
+  speed: 2
+--- !u!114 &8133858864654852108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2983469242067755660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4aa1567a62ac214f87c1e473d175e85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
