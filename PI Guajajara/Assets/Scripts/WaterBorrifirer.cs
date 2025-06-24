@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class WaterBorrifirer : MonoBehaviour
+public class WaterBorrifirer : MonoBehaviour, IStun
 {
     [SerializeField] GameObject water;
     [SerializeField] Transform waterPos;
@@ -20,4 +20,8 @@ public class WaterBorrifirer : MonoBehaviour
         GameObject bullet = Instantiate(water, waterPos.position, waterPos.rotation);
     }
 
+    public void StunEnemy()
+    {
+        
+    }
 }
