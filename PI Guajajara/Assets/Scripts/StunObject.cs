@@ -2,10 +2,15 @@ using UnityEngine;
 
 public class StunObject : MonoBehaviour, IStun
 {
+    Rigidbody2D rb;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
     public void StunEnemy()
     {
-        Vector2 movement = Vector2.negativeInfinity;
-        
+        rb.angularVelocity = 0;        
 
     }
 
