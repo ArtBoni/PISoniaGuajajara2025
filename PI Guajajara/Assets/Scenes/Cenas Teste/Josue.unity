@@ -1326,7 +1326,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (agresivo)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8133858864654852108, guid: 47fd06071f1f96c4497ceebdeb8e2f79, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
