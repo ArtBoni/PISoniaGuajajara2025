@@ -5,10 +5,10 @@ using UnityEngine;
 [Serializable]
 public class Item
 {
-    GameObject itens;
-    int itensQtd;
+   [SerializeField] Sprite itens;
+   [SerializeField] int itensQtd;
 
-    public void Inventory(GameObject itens, int itensQtd)
+    public void Inventory(Sprite itens, int itensQtd)
     {
         this.itens = itens;
         this.itensQtd = itensQtd;
