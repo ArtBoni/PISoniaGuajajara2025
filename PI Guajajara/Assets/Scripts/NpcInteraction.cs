@@ -8,19 +8,19 @@ public class NpcInteraction : TalkScript
     [SerializeField] UnityEvent OnDialogueEnd;
 
     
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject)
-        {
-           OnInteract.Invoke();
-        }
+         private void OnTriggerEnter2D(Collider2D collision)
+         {
+             if(collision.gameObject)
+             {
+                  OnInteract.Invoke();
+             }
         
-    }
+         }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-       OnDialogueEnd.Invoke();
-    }
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            OnDialogueEnd.Invoke();
+        }
 
 
 

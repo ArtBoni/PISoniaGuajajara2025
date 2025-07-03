@@ -12,7 +12,7 @@ public class WaterBorrifirer : MonoBehaviour, IStun
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            target?.StunEnemy();
+            target?.StunEnemy(5f);
             Shoot();
         }
     }
@@ -27,10 +27,10 @@ public class WaterBorrifirer : MonoBehaviour, IStun
         GameObject bullet = Instantiate(water, waterPos.position, waterPos.rotation);
     }
 
-    public void StunEnemy()
+    
+
+    public void StunEnemy(float timer)
     {
         
     }
-
-    
 }
