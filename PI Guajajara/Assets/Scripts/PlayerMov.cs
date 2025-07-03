@@ -23,8 +23,7 @@ public class PlayerMov : MonoBehaviour
         
         if(moveDirection.magnitude >= 0)
         {
-            float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+            return;
         }
         
     }
