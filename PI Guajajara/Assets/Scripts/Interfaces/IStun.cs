@@ -2,5 +2,5 @@ using UnityEngine;
 
 public interface IStun
 {
-    public void StunEnemy();
+    public void StunEnemy(float timer);
 }
