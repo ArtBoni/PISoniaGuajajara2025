@@ -20,8 +20,8 @@ public class Door : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            playerPos = teleportPos;
-            cameraPos = cameraTeleportPos;
+            playerPos.transform.position = new Vector2(teleportPos.position.x, teleportPos.position.y);
+            cameraPos.transform.position = new Vector3(cameraTeleportPos.position.x, cameraTeleportPos.position.y, cameraPos.position.z);
         }
     }
 }
