@@ -29,5 +29,14 @@ public class Hud : MonoBehaviour
         
     }
 
-    
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            itensLimit = Mathf.Clamp(itensLimit, 0, 1);  
+        }
+    }
+
+
 }
