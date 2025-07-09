@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: add5c836950821746936e9a901f2fa9d
   - enabled: 1
+    path: Assets/Scenes/Prologue.unity
+    guid: 003cb3894c4266d42ac19bf92c511d13
+  - enabled: 1
     path: "Assets/Scenes/Come\xE7oDoJogo.unity"
     guid: 139fef6d042989a47b83f06c2ed72173
   - enabled: 1

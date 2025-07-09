@@ -9,6 +9,8 @@ public class PlayerMov : MonoBehaviour
 
     float move;
     float horizontal, vertical;
+    bool facingX = true;
+   
     Rigidbody2D rb;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,10 +33,10 @@ public class PlayerMov : MonoBehaviour
         }
         */
 
-        if (move > 0)
+        if (move > 0 && !facingX)
             Flip();
         
-        if(move < 0)
+        if(move < 0 && facingX)
            Flip();
         
     }
@@ -46,6 +48,9 @@ public class PlayerMov : MonoBehaviour
 
     void Flip()
     {
-
+        facingX = !facingX; 
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1; theScale.y *= -1;
+        transform.localScale = theScale;
     }
 }
