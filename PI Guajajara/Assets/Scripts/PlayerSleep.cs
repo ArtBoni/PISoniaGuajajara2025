@@ -1,16 +1,24 @@
 using UnityEngine;
 
-public class PlayerSleep : MonoBehaviour
+public class PlayerSleep : MonoBehaviour, ISleepable
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] GameObject fadeIn;
+    bool hasTalked;
+    [SerializeField] GameObject player;
+    SpriteRenderer spriteRenderer;
+    [SerializeField] Sprite burningHouse;
+    private void Start()
     {
-        
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        hasTalked = false;
     }
-
-    // Update is called once per frame
-    void Update()
+    public void Sleep()
     {
-        
+        if(hasTalked)
+        {
+            player.SetActive(false);
+            Instantiate(fadeIn);
+            spriteRenderer.sprite = burningHouse;
+        }
     }
 }
