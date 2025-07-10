@@ -7,7 +7,7 @@ public class NpcInteraction : TalkScript
     [SerializeField] UnityEvent OnInteract;
     [SerializeField] UnityEvent OnDialogueEnd;
 
-    
+    TalkScript dialogue;
 
     
     private void OnTriggerEnter2D(Collider2D collision)
@@ -21,20 +21,15 @@ public class NpcInteraction : TalkScript
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        OnDialogueEnd.Invoke();
+        if (collision.gameObject)
+        {
+            OnDialogueEnd.Invoke();
+            ResetDialogue();
+        }
     }
 
 
-    private void Reset()
-    {
-        
-    }
-
-
-
-
-
-
+    
 }
 
 

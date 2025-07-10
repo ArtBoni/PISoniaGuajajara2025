@@ -8,6 +8,7 @@ public class PlayerMov : MonoBehaviour
     
 
     float horizontal, vertical;
+    bool facingX = true;
     SpriteRenderer spriteRenderer;
     Rigidbody2D rb;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -23,8 +24,17 @@ public class PlayerMov : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
 
-        Vector2 direction = new Vector2(horizontal, vertical).normalized;
-        
+        float move = Input.GetAxisRaw("Horizontal"); Input.GetAxisRaw("Vertical");
+       
+        if (move > 0 && facingX)
+            Flip();
+
+        if (move < 0 && !facingX)
+            Flip();
+
+
+
+
     }
 
     private void FixedUpdate()
@@ -34,6 +44,9 @@ public class PlayerMov : MonoBehaviour
 
    public void Flip()
    {
-        
-   }
+        facingX = !facingX;
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
+    }
 }
