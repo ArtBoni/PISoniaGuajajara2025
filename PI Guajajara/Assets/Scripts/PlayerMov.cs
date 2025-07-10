@@ -7,9 +7,11 @@ public class PlayerMov : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] SpriteRenderer spriteRenderer;
 
-    float move;
+    float moveX;
+    float moveY;
     float horizontal, vertical;
     bool facingX = true;
+    bool facingY = true;
    
     Rigidbody2D rb;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -24,7 +26,8 @@ public class PlayerMov : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
-        move = Input.GetAxisRaw("Horizontal"); Input.GetAxisRaw("Vertical");
+        moveX = Input.GetAxisRaw("Horizontal"); 
+        moveY = Input.GetAxisRaw("Vertical");
         /*Vector2 moveDirection = new Vector2 (horizontal, vertical).normalized;
         
         if(moveDirection.magnitude >= 0)
@@ -33,11 +36,23 @@ public class PlayerMov : MonoBehaviour
         }
         */
 
-        if (move > 0 && !facingX)
-            Flip();
+        if (moveX > 0 && !facingX)
+            FlipX();
+
+        if (moveX < 0 && facingX)
+            FlipX();
         
-        if(move < 0 && facingX)
-           Flip();
+           
+
+        if (moveY > 0 && !facingY)
+            FlipY();
+        
+        if(moveY < 0 && facingY)
+            FlipY();
+
+
+
+       
         
     }
 
@@ -46,11 +61,19 @@ public class PlayerMov : MonoBehaviour
         rb.linearVelocity = new Vector2 (horizontal, vertical) * speed;
     }
 
-    void Flip()
+    void FlipX()
     {
-        facingX = !facingX; 
+        facingX = !facingX;
+        Vector3 theScaleX = transform.localScale;
+        theScaleX.x *= -1;
+        transform.localScale = theScaleX;
+    }
+
+    void FlipY()
+    {
+        facingY = !facingY;
         Vector3 theScale = transform.localScale;
-        theScale.x *= -1; theScale.y *= -1;
+        theScale.y *= -1;
         transform.localScale = theScale;
     }
 }
