@@ -10,7 +10,7 @@ public class Hud : MonoBehaviour
     [SerializeField] int selectedIndex;
     
 
-
+    
     void Start()
     {
         SelectItem(selectedIndex);
@@ -35,6 +35,9 @@ public class Hud : MonoBehaviour
                 selectedIndex = itemsSlot.Count - 1;
             SelectItem(selectedIndex);
         }
+
+        
+
     }
 
     public void SelectItem(int index)
