@@ -5,10 +5,10 @@ using UnityEngine;
 public class PlayerMov : MonoBehaviour
 {
     [SerializeField] float speed;
-    
+    [SerializeField] Animator animator;
 
     float horizontal, vertical;
-    bool facingX = true;
+    bool facing = true;
     SpriteRenderer spriteRenderer;
     Rigidbody2D rb;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -24,17 +24,13 @@ public class PlayerMov : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
 
-        float move = Input.GetAxisRaw("Horizontal"); Input.GetAxisRaw("Vertical");
+        animator.SetFloat("Speed", Mathf.Abs(horizontal));
        
-        if (move > 0 && facingX)
+
+        if (horizontal > 0 && !facing)
             Flip();
-
-        if (move < 0 && !facingX)
-            Flip();
-
-
-
-
+        if (horizontal < 0 && facing)
+            Flip();       
     }
 
     private void FixedUpdate()
@@ -44,9 +40,11 @@ public class PlayerMov : MonoBehaviour
 
    public void Flip()
    {
-        facingX = !facingX;
+        facing = !facing;
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
-    }
+   }
+
+    
 }

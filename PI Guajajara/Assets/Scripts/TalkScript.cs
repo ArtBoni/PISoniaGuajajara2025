@@ -74,7 +74,9 @@ public abstract class TalkScript : MonoBehaviour
 
     public void ResetDialogue()
     {
-        lines[index] = null;
+        lines[index] = string.Empty;
+        
+        
     }
 
 
