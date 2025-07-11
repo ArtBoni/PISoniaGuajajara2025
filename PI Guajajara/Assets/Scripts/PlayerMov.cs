@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMov : MonoBehaviour
 {
     [SerializeField] float speed;
-    [SerializeField] Animator animator;
+    [SerializeField] Animation anim;
 
     float horizontal, vertical;
     bool facing = true;
@@ -24,7 +24,7 @@ public class PlayerMov : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
 
-        animator.SetFloat("Speed", Mathf.Abs(horizontal));
+        anim.Blend("PlayerWalk");
        
 
         if (horizontal > 0 && !facing)
