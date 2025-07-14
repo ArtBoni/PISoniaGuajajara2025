@@ -6,7 +6,7 @@ public class PlayerSleep : MonoBehaviour, ISleepable
     bool hasTalked;
     [SerializeField] GameObject player;
     SpriteRenderer spriteRenderer;
-    [SerializeField] static Sprite burningHouse;
+    [SerializeField] Sprite burningHouse;
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();

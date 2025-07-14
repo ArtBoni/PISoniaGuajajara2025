@@ -1,33 +1,18 @@
 using UnityEngine;
-using UnityEngine.Events;
 
 interface ISleepable
 {
     public void Sleep();
 }
-enum VillageVersion
-{
-    FINE, BURNING
-}
 
 public class Bed : MonoBehaviour
 {
     [SerializeField] GameObject player;
-    [SerializeField] VillageVersion villageVersion = VillageVersion.FINE;
-    public UnityEvent burning;
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.TryGetComponent(out ISleepable sleepObj))
+        if (collision.gameObject.player)
         {
-            Burn();
+
         }
-    }
-    private void Start()
-    {
-        burning.AddListener(Burn);
-    }
-    public void Burn()
-    {
-        villageVersion = VillageVersion.BURNING;
     }
 }
