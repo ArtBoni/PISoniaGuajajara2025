@@ -680,7 +680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a0513c32df36624cae0a7d4e4551b90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyableObject: {fileID: 0}
+  destroyableObject: {fileID: 1229229528}
   buttonActive: {fileID: 0}
   buttonInactive: {fileID: 0}
 --- !u!61 &1045812414
