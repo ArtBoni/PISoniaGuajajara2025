@@ -24,7 +24,9 @@ public class PlayerMov : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
 
-        anim.Blend("PlayerWalk");
+        
+        if(horizontal >= 0)
+            anim.Blend("PlayerWalk");
        
 
         if (horizontal > 0 && !facing)
