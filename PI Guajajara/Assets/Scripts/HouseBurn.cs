@@ -19,4 +19,8 @@ public class HouseBurn : MonoBehaviour
     {
         
     }
+    public void Burn()
+    {
+        spriteRenderer.sprite = burningHouses;
+    }
 }

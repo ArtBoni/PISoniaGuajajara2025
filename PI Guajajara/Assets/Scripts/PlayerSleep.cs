@@ -5,11 +5,8 @@ public class PlayerSleep : MonoBehaviour, ISleepable
     [SerializeField] GameObject fadeIn;
     bool hasTalked;
     [SerializeField] GameObject player;
-    SpriteRenderer spriteRenderer;
-    [SerializeField] Sprite burningHouse;
-    private void Start()
-    {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+    private void Start() 
+    { 
         hasTalked = false;
     }
     public void Sleep()
@@ -17,8 +14,7 @@ public class PlayerSleep : MonoBehaviour, ISleepable
         if(hasTalked)
         {
             player.SetActive(false);
-            Instantiate(fadeIn);
-            spriteRenderer.sprite = burningHouse;
+            fadeIn.SetActive(true);
         }
     }
 }
