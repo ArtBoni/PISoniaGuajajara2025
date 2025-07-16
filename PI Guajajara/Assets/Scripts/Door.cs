@@ -20,7 +20,7 @@ public class Door : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            playerPos.transform.position = new Vector2(teleportPos.position.x, teleportPos.position.y);
+            playerPos.transform.position = new Vector3(teleportPos.position.x, teleportPos.position.y, teleportPos.position.z);
             cameraPos.transform.position = new Vector3(cameraTeleportPos.position.x, cameraTeleportPos.position.y, cameraPos.position.z);
         }
     }

@@ -17,4 +17,11 @@ public class PlayerSleep : MonoBehaviour, ISleepable
             fadeIn.SetActive(true);
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Talk"))
+        {
+            hasTalked=true;
+        }
+    }
 }
