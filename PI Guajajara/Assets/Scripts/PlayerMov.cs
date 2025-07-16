@@ -9,11 +9,13 @@ public class PlayerMov : MonoBehaviour
     float horizontal, vertical;
     bool facing = true;
     SpriteRenderer spriteRenderer;
+    Animator animator;
     Rigidbody2D rb;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -22,14 +24,13 @@ public class PlayerMov : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
+        animator.SetFloat("X", horizontal);
+        animator.SetFloat("Y", vertical);
+
+
 
         
-              
-
-        if (horizontal > 0 && !facing)
-            Flip();
-        if (horizontal < 0 && facing)
-            Flip();       
+        
     }
 
     private void FixedUpdate()
