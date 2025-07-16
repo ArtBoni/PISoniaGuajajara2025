@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cabana (2)_0: 3735171531704803840
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
