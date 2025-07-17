@@ -4,12 +4,11 @@ public class DestroyButton : MonoBehaviour
 {
     [SerializeField] GameObject destroyable;
     SpriteRenderer spriteRenderer;
-    [SerializeField] Sprite buttonUnpressed;
     [SerializeField] Sprite buttonPressed;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame

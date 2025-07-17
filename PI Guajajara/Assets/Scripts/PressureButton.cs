@@ -4,12 +4,12 @@ public class PressureButton : MonoBehaviour
 {
     [SerializeField] GameObject destroyableObject;
     SpriteRenderer spriteRenderer;
-    [SerializeField] SpriteRenderer buttonActive;
-    [SerializeField] SpriteRenderer buttonInactive;
+    [SerializeField] Sprite buttonActive;
+    [SerializeField] Sprite buttonInactive;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -22,7 +22,7 @@ public class PressureButton : MonoBehaviour
         if(collision.gameObject)
         {
             destroyableObject.SetActive(false);
-            spriteRenderer = buttonActive;
+            spriteRenderer.sprite = buttonActive;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -30,7 +30,7 @@ public class PressureButton : MonoBehaviour
         if (collision.gameObject)
         {
             destroyableObject.SetActive(true);
-            spriteRenderer = buttonInactive;
+            spriteRenderer.sprite = buttonInactive;
         }
     }
 }
