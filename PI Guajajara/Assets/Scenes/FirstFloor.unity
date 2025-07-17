@@ -4154,6 +4154,7 @@ GameObject:
   - component: {fileID: 1468841938}
   - component: {fileID: 1468841937}
   - component: {fileID: 1468841940}
+  - component: {fileID: 1468841941}
   m_Layer: 0
   m_Name: Box
   m_TagString: Untagged
@@ -4173,7 +4174,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1000
+  m_Mass: 400
   m_LinearDamping: 0
   m_AngularDamping: 0
   m_GravityScale: 0
@@ -4304,6 +4305,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1468841941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468841936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5805d251a6a3e19499cd74a0785585b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1485743333
 GameObject:
   m_ObjectHideFlags: 0
