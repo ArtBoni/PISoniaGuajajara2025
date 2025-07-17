@@ -3,7 +3,7 @@ using UnityEngine;
 public class ResetButton : MonoBehaviour
 {
     [SerializeField] Transform objPos;
-    [SerializeField] Transform objOgPos;
+    Transform objOgPos;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
