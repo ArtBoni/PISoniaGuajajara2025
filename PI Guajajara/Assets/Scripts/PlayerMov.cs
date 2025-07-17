@@ -25,13 +25,10 @@ public class PlayerMov : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
         animator.SetFloat("X", horizontal);
-        animator.SetFloat("Y", vertical);
-
-
-
-        
-        
+        animator.SetFloat("Y", vertical);        
     }
+
+
 
     private void FixedUpdate()
     {
