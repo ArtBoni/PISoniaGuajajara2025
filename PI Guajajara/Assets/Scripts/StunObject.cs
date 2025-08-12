@@ -1,9 +1,10 @@
 using UnityEngine;
 
-public class StunObject : MonoBehaviour, IStun
+public class StunObject : MonoBehaviour, IHit
 {
     Rigidbody2D rb;
     [Min(1)] float timer;
+    IHit hittable;
 
     private void Awake()
     {
@@ -15,16 +16,17 @@ public class StunObject : MonoBehaviour, IStun
     {
         if (collision.gameObject == true) 
         {
-            StunEnemy(5f);
+            Hit(5f);
         }
     }
+        
 
-    public void StunEnemy(float timer)
+    public void Hit(float timer)
     {
         this.timer = timer;
         timer--;
         rb.angularVelocity = 0;
-        if(timer == 0f)
+        if (timer == 0f)
         {
             rb.angularVelocity = 1;
         }

@@ -1,18 +1,18 @@
 using System.Collections;
 using UnityEngine;
 
-public class WaterBorrifirer : MonoBehaviour, IStun
+public class WaterBorrifirer : MonoBehaviour, IHit
 {
     [SerializeField] GameObject water;
     [SerializeField] Transform waterPos;
-    IStun target;
+    IHit target;
 
 
     private void Update()
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            target?.StunEnemy(5f);
+            target?.Hit(5f);
             Shoot();
         }
     }
@@ -26,10 +26,7 @@ public class WaterBorrifirer : MonoBehaviour, IStun
     {
         GameObject bullet = Instantiate(water, waterPos.position, waterPos.rotation);
     }
-
-    
-
-    public void StunEnemy(float timer)
+    public void Hit(float timer)
     {
         
     }
