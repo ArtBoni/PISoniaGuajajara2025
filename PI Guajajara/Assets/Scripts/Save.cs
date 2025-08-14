@@ -27,17 +27,17 @@ public class Save : MonoBehaviour
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
-    {
-        
+    {        
         savePath = Application.persistentDataPath + $"/{fileName}.json";
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             SavePath(toolsSystem);
+            print("Jogo Salvo");
         }
         if (Input.GetKeyDown(KeyCode.L))
         {

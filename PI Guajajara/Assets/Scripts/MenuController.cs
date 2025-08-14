@@ -11,12 +11,12 @@ public class MenuController : MonoBehaviour
     }
 
 
-    public void OpenCreditsBTN()
+    public void OpenBTN()
     {
         creditsPainel.SetActive(true);
     }
 
-    public void CloseCreditsBTN() 
+    public void CloseBTN() 
     {
         creditsPainel.SetActive(false);
     }

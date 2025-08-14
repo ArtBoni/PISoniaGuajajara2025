@@ -473,7 +473,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 682482358}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: OpenCreditsBTN
+        m_MethodName: OpenBTN
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -935,7 +935,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Feito por:\n\nPrograma\xE7\xE3o:\nJosu\xE9 Ramos F. Petri\n\nArte: \nBernardo
-    Rocha\n\nDesigner e Programador\nArthur Veras Bonelli\n\nAssets utilizados"
+    Rocha\n\nDesigner e Programador\nArthur Veras Bonelli\n\nAssets utilizados\n\n\nFeonY\nComplete_UI_Essential"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1294,8 +1294,8 @@ Transform:
   m_GameObject: {fileID: 840769230}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.02, y: -2.06, z: 0}
-  m_LocalScale: {x: 2.938437, y: 0.8040445, z: 1}
+  m_LocalPosition: {x: 0.02, y: -2.305, z: 0}
+  m_LocalScale: {x: 3.2322807, y: 0.8040445, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1330,8 +1330,8 @@ Transform:
   m_LocalScale: {x: 101.03588, y: 101.03588, z: 101.03588}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 670100271}
   - {fileID: 1314000748}
+  - {fileID: 670100271}
   m_Father: {fileID: 1372499469}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &885726634
@@ -1582,6 +1582,7 @@ GameObject:
   - component: {fileID: 1220569881}
   - component: {fileID: 1220569880}
   - component: {fileID: 1220569879}
+  - component: {fileID: 1220569882}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1663,6 +1664,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1220569882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220569878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
 --- !u!1 &1314000747
 GameObject:
   m_ObjectHideFlags: 0
@@ -1697,7 +1742,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.5241241, y: -8.86}
+  m_AnchoredPosition: {x: 1.5241241, y: -9.51}
   m_SizeDelta: {x: 994.46, y: 160.18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1314000749
@@ -1881,7 +1926,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.33, z: 0}
-  m_LocalScale: {x: 2.938437, y: 0.8040445, z: 1}
+  m_LocalScale: {x: 3.3792024, y: 0.8040445, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2039,7 +2084,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1372499469
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2180,8 +2225,8 @@ Transform:
   m_GameObject: {fileID: 1425046062}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0094, y: 1.29, z: 0}
-  m_LocalScale: {x: 2.938437, y: 0.8040445, z: 1}
+  m_LocalPosition: {x: -0.0094, y: 1.458, z: 0}
+  m_LocalScale: {x: 3.15882, y: 0.8040445, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2532,8 +2577,8 @@ Transform:
   m_GameObject: {fileID: 2060536713}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.32, y: 3.45, z: 0}
-  m_LocalScale: {x: 12.951769, y: 1.1959609, z: 1}
+  m_LocalPosition: {x: 0.32, y: 3.72, z: 0}
+  m_LocalScale: {x: 14.246946, y: 1.4800016, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2623,7 +2668,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 682482358}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: CloseCreditsBTN
+        m_MethodName: CloseBTN
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
