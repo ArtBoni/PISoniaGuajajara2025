@@ -1487,8 +1487,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1057986001}
   - component: {fileID: 1057986000}
-  - component: {fileID: 1057986002}
   - component: {fileID: 1057986003}
+  - component: {fileID: 1057986004}
   m_Layer: 0
   m_Name: CircuitBreaker
   m_TagString: Untagged
@@ -1560,25 +1560,12 @@ Transform:
   m_GameObject: {fileID: 1057985999}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.07, y: 6.11, z: 0}
+  m_LocalPosition: {x: -14.852532, y: 13.095019, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1057986002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1057985999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00055c9a92f411c49a419d86c4d388ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: FirstFloor
 --- !u!61 &1057986003
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1625,6 +1612,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1.5}
   m_EdgeRadius: 0
+--- !u!114 &1057986004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057985999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 790e8c44b42af2646b6c10f423c838d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1122249346
 GameObject:
   m_ObjectHideFlags: 0
