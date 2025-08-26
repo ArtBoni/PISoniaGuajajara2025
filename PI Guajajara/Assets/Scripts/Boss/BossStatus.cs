@@ -11,7 +11,7 @@ public class BossStatus : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        healthBar.value = health;
     }
 
     // Update is called once per frame
