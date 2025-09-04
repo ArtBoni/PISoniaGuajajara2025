@@ -1,10 +1,19 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
+
+[System.Serializable]
+public class AudioEvent: UnityEvent<AudioSource> { }
+
+
 
 public class WaterBorrifirer : MonoBehaviour, IHit
 {
     [SerializeField] GameObject water;
     [SerializeField] Transform waterPos;
+    [SerializeField] private AudioEvent OnWaterEvent;
+    [SerializeField] private AudioSource waterSound;
+    
     IHit target;
 
 
@@ -12,7 +21,7 @@ public class WaterBorrifirer : MonoBehaviour, IHit
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            target?.Hit(5f);
+            target?.Hit(5f); 
             Shoot();
         }
     }
@@ -25,6 +34,9 @@ public class WaterBorrifirer : MonoBehaviour, IHit
     void Shoot()
     {
         GameObject bullet = Instantiate(water, waterPos.position, waterPos.rotation);
+        print($"Borrifire {waterSound}");
+        OnWaterEvent.Invoke(waterSound);
+
     }
     public void Hit(float timer)
     {

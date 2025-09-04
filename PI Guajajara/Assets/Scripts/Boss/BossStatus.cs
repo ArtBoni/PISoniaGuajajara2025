@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class BossStatus : MonoBehaviour
 {
+    float damege = 1;
     [SerializeField] float health;
     float timeBtwDamage = 1.5f;
 
@@ -17,6 +18,6 @@ public class BossStatus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        health -= damege;
     }
 }

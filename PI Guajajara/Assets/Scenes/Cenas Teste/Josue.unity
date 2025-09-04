@@ -1139,6 +1139,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1161070602}
   - component: {fileID: 1161070601}
+  - component: {fileID: 1161070604}
+  - component: {fileID: 1161070603}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -1216,6 +1218,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1161070603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161070600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c19f7cb5b44c8b4c93f843c421329c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  healthBar: {fileID: 2051985542}
+--- !u!114 &1161070604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161070600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72f048d4dd2160945a42d8fefc54667e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1189411568 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1503311716943636228, guid: b3743957935e4424cacdd1ea8dcb9430, type: 3}
@@ -1648,6 +1676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   water: {fileID: 7452247609057223504, guid: 133ca357a672d344e9777d8b12fb5c5e, type: 3}
   waterPos: {fileID: 1345721519}
+  waterSound: {fileID: 0}
 --- !u!1 &1453188908
 GameObject:
   m_ObjectHideFlags: 0
@@ -2222,9 +2251,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 945d043f98dfe8244b93a5e3e531a9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsSlot:
-  - {fileID: 1345721520}
-  selectedIndex: 0
 --- !u!1 &2051985540
 GameObject:
   m_ObjectHideFlags: 0
@@ -2310,7 +2336,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
