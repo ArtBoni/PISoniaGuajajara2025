@@ -1231,6 +1231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  fightPoints: []
   healthBar: {fileID: 2051985542}
 --- !u!114 &1161070604
 MonoBehaviour:
@@ -1676,6 +1677,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   water: {fileID: 7452247609057223504, guid: 133ca357a672d344e9777d8b12fb5c5e, type: 3}
   waterPos: {fileID: 1345721519}
+  OnWaterEvent:
+    m_PersistentCalls:
+      m_Calls: []
   waterSound: {fileID: 0}
 --- !u!1 &1453188908
 GameObject:
