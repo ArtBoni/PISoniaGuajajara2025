@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public interface IHit
+public interface IDamegabled
 {   
     public void Hit(float timer);
 }

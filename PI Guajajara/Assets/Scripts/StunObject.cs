@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class StunObject : MonoBehaviour, IHit
+public class StunObject : MonoBehaviour, IDamegabled
 {
     Rigidbody2D rb;
     [Min(1)] float timer;
-    IHit hittable;
+    IDamegabled hittable;
 
     private void Awake()
     {

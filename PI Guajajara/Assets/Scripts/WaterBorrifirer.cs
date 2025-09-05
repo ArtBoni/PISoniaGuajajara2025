@@ -7,14 +7,14 @@ public class AudioEvent: UnityEvent<AudioSource> { }
 
 
 
-public class WaterBorrifirer : MonoBehaviour, IHit
+public class WaterBorrifirer : MonoBehaviour, IDamegabled
 {
     [SerializeField] GameObject water;
     [SerializeField] Transform waterPos;
     [SerializeField] private AudioEvent OnWaterEvent;
     [SerializeField] private AudioSource waterSound;
     
-    IHit target;
+    IDamegabled target;
 
 
     private void Update()

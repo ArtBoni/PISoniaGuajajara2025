@@ -1230,8 +1230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c19f7cb5b44c8b4c93f843c421329c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  fightPoints: []
+  maxHealth: 50
   healthBar: {fileID: 2051985542}
 --- !u!114 &1161070604
 MonoBehaviour:
@@ -2124,8 +2123,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2051985541}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.25}
-  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2335,7 +2334,7 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1684066451}
-  m_HandleRect: {fileID: 0}
+  m_HandleRect: {fileID: 1862779902}
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 1
