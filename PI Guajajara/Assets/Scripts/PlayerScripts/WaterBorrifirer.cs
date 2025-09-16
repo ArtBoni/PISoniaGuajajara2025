@@ -1,33 +1,36 @@
-using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class WaterBorrifirer : MonoBehaviour, IHit
+[System.Serializable]
+public class AudioEvent : UnityEvent<AudioSource> { }
+
+public class WaterBorrifirer : MonoBehaviour
 {
-    [SerializeField] GameObject water;
-    [SerializeField] Transform waterPos;
-    IHit target;
+    [Header("Water Settings")]
+    [SerializeField] private GameObject waterPrefab;
+    [SerializeField] private Transform waterSpawnPoint;
+    [SerializeField] private float damage = 5f;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource waterSound;
+    [SerializeField] private AudioEvent OnWaterEvent;
 
     private void Update()
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            target?.Hit(5f);
             Shoot();
         }
     }
 
-    private void FixedUpdate()
-    {
-        
-    }
-
     void Shoot()
     {
-        GameObject bullet = Instantiate(water, waterPos.position, waterPos.rotation);
-    }
-    public void Hit(float timer)
-    {
-        
+        GameObject bullet = Instantiate(waterPrefab, waterSpawnPoint.position, waterSpawnPoint.rotation);
+        WaterProjetil proj = bullet.GetComponent<WaterProjetil>();
+
+        if (proj != null)
+            proj.SetDamage(damage);
+
+        OnWaterEvent?.Invoke(waterSound);
     }
 }

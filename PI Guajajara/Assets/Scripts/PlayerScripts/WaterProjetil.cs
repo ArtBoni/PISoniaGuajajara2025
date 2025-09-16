@@ -2,16 +2,33 @@ using UnityEngine;
 
 public class WaterProjetil : MonoBehaviour
 {
-    [SerializeField] int velocity = 5;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private float velocity = 10f;
+    [SerializeField] private float lifeTime = 0.5f;
+
+    private float damage;
+
+    private void Start()
     {
-        
+        Destroy(gameObject, lifeTime);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        Destroy(gameObject, .5f);
+        transform.Translate(Vector2.right * velocity * Time.deltaTime);
+    }
+
+    public void SetDamage(float dmg)
+    {
+        damage = dmg;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        IDamegabled enemy = collision.GetComponent<IDamegabled>();
+        if (enemy != null)
+        {
+            enemy.Hit(damage);
+            Destroy(gameObject);
+        }
     }
 }

@@ -1,4 +1,3 @@
-using System.Threading;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -6,16 +5,16 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMov : MonoBehaviour
 {
-    [SerializeField] float speed;
-    [SerializeField] UnityEvent OnPause;
-    [SerializeField] UnityEvent OnUnPause;
-    
-    float horizontal, vertical;
-    bool facing = true;
-    SpriteRenderer spriteRenderer;
-    Animator animator;
-    Rigidbody2D rb;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] private float speed = 5f;
+    [SerializeField] private UnityEvent OnPause;
+    [SerializeField] private UnityEvent OnUnPause;
+
+    private float horizontal, vertical;
+    private bool facing = true;
+    private SpriteRenderer spriteRenderer;
+    private Animator animator;
+    private Rigidbody2D rb;
+
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -23,48 +22,39 @@ public class PlayerMov : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
+
         animator.SetFloat("X", horizontal);
-        animator.SetFloat("Y", vertical);      
-        
-
-
-
+        animator.SetFloat("Y", vertical);
 
         if (Input.GetButtonDown("Cancel"))
         {
-            if(Time.timeScale == 0)
+            if (Time.timeScale == 0)
             {
                 Time.timeScale = 1;
-                OnUnPause.Invoke();
-            }else
+                OnUnPause?.Invoke();
+            }
+            else
             {
                 Time.timeScale = 0;
-                OnPause.Invoke();
+                OnPause?.Invoke();
             }
         }
     }
-
-
 
     private void FixedUpdate()
     {
         rb.linearVelocity = new Vector2(horizontal, vertical) * speed;
     }
 
-   public void Flip()
-   {
+    public void Flip()
+    {
         facing = !facing;
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
-   }
-
-    
-
-
+    }
 }
