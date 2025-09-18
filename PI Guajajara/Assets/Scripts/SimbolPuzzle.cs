@@ -8,11 +8,24 @@ public class SimbolPuzzle : MonoBehaviour
     private void Start()
     {
         simbol = GetComponent<Image>();
+        StartCoroutine(WaitColorToChange());
+
+
     }
 
     private void Update()
     {
-        simbol.color = Random.ColorHSV();
     }
+
+  public IEnumerator WaitColorToChange()
+  {
+        float timeChenge = .5f;
+        while (true) {
+            simbol.color = Random.ColorHSV();
+            yield return new WaitForSeconds(timeChenge);
+        }
+
+        
+  }
 
 }
