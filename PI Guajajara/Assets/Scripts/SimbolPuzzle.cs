@@ -1,9 +1,10 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SimbolPuzzle : MonoBehaviour
 {
-    [SerializeField] GameObject[] simbolObj;
+    [SerializeField] Image[] simbolObj;
     [SerializeField] GameObject painelSimbol;
     [SerializeField] GameObject openObj;
     [SerializeField] float corectOrder;
@@ -19,12 +20,11 @@ public class SimbolPuzzle : MonoBehaviour
 
     private void Update()
     {
-        simbolObj[simbolObj.Length - 1].transform.position = Input.mousePosition;
+        simbolObj[simbolObj.Length - 1].transform.SetAsFirstSibling();
     }
 
     IEnumerator ChangeSimbols()
     {
-        
         yield return new WaitForSeconds(waitToChangeOrder);
     }
 
