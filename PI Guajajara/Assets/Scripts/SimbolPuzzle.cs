@@ -4,28 +4,15 @@ using UnityEngine.UI;
 
 public class SimbolPuzzle : MonoBehaviour
 {
-    [SerializeField] Image[] simbolObj;
-    [SerializeField] GameObject painelSimbol;
-    [SerializeField] GameObject openObj;
-    [SerializeField] float corectOrder;
-    [SerializeField] int waitToChangeOrder;
-    bool isCorrect = false;
-
+    Image simbol;
     private void Start()
     {
-        painelSimbol.SetActive(false);
-        isCorrect = false;
-        ChangeSimbols();
+        simbol = GetComponent<Image>();
     }
 
     private void Update()
     {
-        simbolObj[simbolObj.Length - 1].transform.SetAsFirstSibling();
-    }
-
-    IEnumerator ChangeSimbols()
-    {
-        yield return new WaitForSeconds(waitToChangeOrder);
+        simbol.color = Random.ColorHSV();
     }
 
 }
