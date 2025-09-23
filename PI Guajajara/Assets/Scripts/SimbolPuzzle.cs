@@ -6,6 +6,7 @@ public class SimbolPuzzle : MonoBehaviour
 {
     Image simbol;
     [SerializeField] GameObject panel;
+    [SerializeField] GameObject openObj;
     private void Start()
     {
         simbol = GetComponent<Image>();
@@ -25,6 +26,14 @@ public class SimbolPuzzle : MonoBehaviour
         {
             simbol.color = Random.ColorHSV();
             yield return new WaitForSeconds(timeChenge);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            print("Funciona");
         }
     }
 
