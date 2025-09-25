@@ -10,7 +10,7 @@ public class PlayerMov : MonoBehaviour
     [SerializeField] private UnityEvent OnUnPause;
 
     private float horizontal, vertical;
-    private bool facing = true;
+    private bool isPaused;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private Rigidbody2D rb;
@@ -20,6 +20,7 @@ public class PlayerMov : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        isPaused = false;
     }
 
     void Update()
@@ -50,11 +51,20 @@ public class PlayerMov : MonoBehaviour
         rb.linearVelocity = new Vector2(horizontal, vertical) * speed;
     }
 
-    public void Flip()
+   public void Pause()
     {
-        facing = !facing;
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
+        
+        if (Input.GetButton("Escape"))
+        {
+            isPaused = !isPaused;
+            OnPause.Invoke();
+            Time.timeScale = 0;
+        }
+        else
+        {
+            isPaused = false;
+            OnUnPause.Invoke();
+            Time.timeScale = 1;
+        }
     }
 }

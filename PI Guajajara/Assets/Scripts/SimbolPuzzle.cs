@@ -6,7 +6,7 @@ public class SimbolPuzzle : MonoBehaviour
 {
     Image simbol;
     [SerializeField] GameObject panel;
-    [SerializeField] GameObject openObj;
+    
     private void Start()
     {
         simbol = GetComponent<Image>();
@@ -31,9 +31,9 @@ public class SimbolPuzzle : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject)
         {
-            print("Funciona");
+            panel.SetActive(true);
         }
     }
 
