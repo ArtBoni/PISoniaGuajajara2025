@@ -6,6 +6,7 @@ public class SimbolPuzzle : MonoBehaviour
 {
     Image simbol;
     [SerializeField] GameObject panel;
+    [SerializeField] GameObject exitPanel;
     
     private void Start()
     {
@@ -34,7 +35,10 @@ public class SimbolPuzzle : MonoBehaviour
         if (collision.gameObject)
         {
             panel.SetActive(true);
+            Time.timeScale = 0;
         }
     }
+
+    
 
 }

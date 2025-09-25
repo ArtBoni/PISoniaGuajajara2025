@@ -20,6 +20,7 @@ public class PlayerMov : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        
         isPaused = false;
     }
 
