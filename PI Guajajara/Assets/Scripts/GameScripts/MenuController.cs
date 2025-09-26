@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
-    [SerializeField] GameObject creditsPainel;
+    [SerializeField] GameObject painel;
     
     public void Teleport(string name)
     {
@@ -13,12 +13,12 @@ public class MenuController : MonoBehaviour
 
     public void OpenBTN()
     {
-        creditsPainel.SetActive(true);
+        painel.SetActive(true);
     }
 
     public void CloseBTN() 
     {
-        creditsPainel.SetActive(false);
+        painel.SetActive(false);
     }
 
 
