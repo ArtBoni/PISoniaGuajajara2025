@@ -6,6 +6,7 @@ public class PatrolEnemy : MonoBehaviour
 {
    [SerializeField] Transform[] patrolPoints;
    [SerializeField] float moveSpeed, reachDistance, waitTimeAtPoint;
+   [SerializeField] Transform target;
     
     int currentPointIndex = 0;   
     Rigidbody2D rb;
@@ -19,6 +20,15 @@ public class PatrolEnemy : MonoBehaviour
         {
             transform.position = patrolPoints[currentPointIndex].position;
         }
+    }
+
+    private void Update()
+    {
+        if(target != null)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+        }
+        
     }
 
     void FixedUpdate()
