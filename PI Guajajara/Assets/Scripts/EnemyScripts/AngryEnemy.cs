@@ -20,6 +20,7 @@ public class AngryEnemy : MonoBehaviour, IDamegabled
 
     private void Update()
     {
+        
         // diminui o tempo de stun a cada frame
         if (stunTimer > 0)
         {
@@ -27,14 +28,10 @@ public class AngryEnemy : MonoBehaviour, IDamegabled
             return; // enquanto estiver stunado não se move
         }
 
-        // se não está stunado, persegue o player
+        // se o transform não for nulo ele persegue o alvo
         if (target != null)
         {
-            transform.position = Vector2.MoveTowards(
-                transform.position,
-                target.position,
-                speed * Time.deltaTime
-            );
+            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }
     }
 

@@ -6,6 +6,7 @@ public class PatrolEnemy : MonoBehaviour
 {
    [SerializeField] Transform[] patrolPoints;
    [SerializeField] float moveSpeed, reachDistance, waitTimeAtPoint;
+   [SerializeField] float visonDistance;
    [SerializeField] Transform target;
     
     int currentPointIndex = 0;   

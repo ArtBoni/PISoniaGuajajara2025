@@ -377,7 +377,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &373072592
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -468,6 +468,7 @@ MonoBehaviour:
   moveSpeed: 2
   reachDistance: 2
   waitTimeAtPoint: 0.2
+  visonDistance: 0
   target: {fileID: 1189411579}
 --- !u!50 &373072595
 Rigidbody2D:
@@ -3537,7 +3538,7 @@ MonoBehaviour:
   target: {fileID: 1189411579}
   speed: 2
   maxLife: 20
-  stunDuration: 1.5
+  stunDuration: 3.5
 --- !u!1 &2983469240237958907
 GameObject:
   m_ObjectHideFlags: 0
@@ -3558,7 +3559,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &3079583195800172535
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3604,7 +3605,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.38714847, g: 0.9433962, b: 0.91672635, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3686,7 +3687,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

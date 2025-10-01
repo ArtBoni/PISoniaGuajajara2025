@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class LockButton : MonoBehaviour
+public class Title : MonoBehaviour
 {
     EventSystem eventSystem;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -13,10 +13,9 @@ public class LockButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (eventSystem.currentSelectedGameObject == null)
+        if(eventSystem.currentSelectedGameObject == null)
         {
             eventSystem.SetSelectedGameObject(eventSystem.firstSelectedGameObject);
-
         }
     }
 }
