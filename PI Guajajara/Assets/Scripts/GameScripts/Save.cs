@@ -6,6 +6,25 @@ public enum Tools
     None, Water, Shield
 }
 [System.Serializable]
+public class SaveData
+{
+    public PlayerTollsSystem playerTools;
+    public float[] playerPosition; // [x, y, z]
+
+    public SaveData(PlayerTollsSystem tools, Vector3 position)
+    {
+        playerTools = tools;
+        playerPosition = new float[] { position.x, position.y, position.z };
+    }
+
+    public Vector3 GetPosition()
+    {
+        return new Vector3(playerPosition[0], playerPosition[1], playerPosition[2]);
+    }
+}
+
+
+
 public class PlayerTollsSystem
 {
     [SerializeField] float toolColldown;
@@ -21,55 +40,63 @@ public class PlayerTollsSystem
 public class Save : MonoBehaviour
 {
     [SerializeField] PlayerTollsSystem toolsSystem = new PlayerTollsSystem(0.5f);
-
+    [SerializeField] Transform player; 
     [SerializeField] string fileName;
+
     string savePath;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
-    {        
+    {
         savePath = Application.persistentDataPath + $"/{fileName}.json";
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SavePath(toolsSystem);
+            SavePath();
             print("Jogo Salvo");
         }
         if (Input.GetKeyDown(KeyCode.L))
         {
-            PlayerTollsSystem temp = Load();
-            if (temp == null)
-                return;
-            toolsSystem = Load();
+            Load();
         }
     }
-        
-    public void SavePath(PlayerTollsSystem data)
+
+    public void SavePath()
     {
+        SaveData data = new SaveData(toolsSystem, player.position);
         string json = JsonUtility.ToJson(data);
         File.WriteAllText(savePath, json);
         print("Json Salvo");
     }
-    public PlayerTollsSystem Load()
+
+    public void Load()
     {
         if (!File.Exists(savePath))
-            return null;
+            return;
 
         string json = File.ReadAllText(savePath);
-        PlayerTollsSystem playerToolSystem = JsonUtility.FromJson<PlayerTollsSystem>(json);
+        SaveData data = JsonUtility.FromJson<SaveData>(json);
+
+        // Restaurar ferramentas
+        toolsSystem = data.playerTools;
+
+        // Restaurar posição do jogador
+        player.position = data.GetPosition();
+
         print("Jogo carregado");
-        return playerToolSystem;
-        
     }
 
     public void Delete()
     {
-        if(!File.Exists(savePath))
+        if (!File.Exists(savePath))
             return;
         File.Delete(savePath);
+    }
+
+    public bool HasSave()
+    {
+        return File.Exists(savePath);
     }
 }

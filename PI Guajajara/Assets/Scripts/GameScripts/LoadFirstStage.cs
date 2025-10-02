@@ -3,9 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class LoadFirstStage : MonoBehaviour
 {
+    [SerializeField] string fileName;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadScene("FirstFloor");
+        SceneManager.LoadScene(fileName);
     }
 }
