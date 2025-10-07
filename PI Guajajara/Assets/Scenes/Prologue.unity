@@ -20922,6 +20922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f22a881f5b7b94d43a0d3f63a0a05504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fileName: TutorialFloor
 --- !u!1 &1531743689
 GameObject:
   m_ObjectHideFlags: 0
