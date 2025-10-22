@@ -3,29 +3,36 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 
-public abstract class TalkScript : MonoBehaviour
+public class TalkScript : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI textComponent;
-
+    [SerializeField] GameObject dialoguePanel;
     [SerializeField] string[] lines;
-    [SerializeField] float textSpeed;
+    [SerializeField] float textSpeed = 0.05f;
 
     int index;
     bool isTyping = false;
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    void OnEnable()
     {
-        textComponent.text = string.Empty;
+        // Quando o painel é ativado, começa o diálogo
         StartDialogue();
     }
 
-    // Update is called once per frame
+    void OnDisable()
+    {
+        // Quando o painel é desativado, reseta tudo
+        ResetDialogue();
+    }
+
     void Update()
     {
+        if (!dialoguePanel.activeSelf)
+            return;
+
         if (Input.GetKeyDown(KeyCode.E))
-        {            
-            if(isTyping) 
+        {
+            if (isTyping)
             {
                 StopAllCoroutines();
                 textComponent.text = lines[index];
@@ -41,6 +48,7 @@ public abstract class TalkScript : MonoBehaviour
     void StartDialogue()
     {
         index = 0;
+        textComponent.text = string.Empty;
         StartCoroutine(TypeLine());
     }
 
@@ -48,14 +56,14 @@ public abstract class TalkScript : MonoBehaviour
     {
         isTyping = true;
         textComponent.text = string.Empty;
-        foreach (char c in lines[index].ToCharArray())
+
+        foreach (char c in lines[index])
         {
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
-        isTyping = false;
-        
 
+        isTyping = false;
     }
 
     void NextLine()
@@ -63,20 +71,21 @@ public abstract class TalkScript : MonoBehaviour
         if (index < lines.Length - 1)
         {
             index++;
-            textComponent.text = string.Empty;
             StartCoroutine(TypeLine());
         }
         else
         {
-        }   
-        
+            index = -1;
+            dialoguePanel.SetActive(false);
+        }  
     }
 
-    public void ResetDialogue()
+    void ResetDialogue()
     {
-        lines[index] = string.Empty;
-        
-        
+        StopAllCoroutines();
+        textComponent.text = string.Empty;
+        index = 0;
+        isTyping = false;
     }
 
 

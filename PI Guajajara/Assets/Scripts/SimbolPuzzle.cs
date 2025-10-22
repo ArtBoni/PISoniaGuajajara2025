@@ -6,7 +6,6 @@ public class SimbolPuzzle : MonoBehaviour
 {
     Image simbol;
     [SerializeField] GameObject painel;
-    [SerializeField] GameObject exitPanel;
     
     private void Start()
     {

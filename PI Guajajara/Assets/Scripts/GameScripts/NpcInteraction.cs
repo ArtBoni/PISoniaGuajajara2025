@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -28,8 +29,10 @@ public class NpcInteraction : TalkScript
         }
     }
 
-
-    
+    private void ResetDialogue()
+    {
+        throw new NotImplementedException();
+    }
 }
 
 
