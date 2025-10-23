@@ -9,7 +9,7 @@ public enum Tools
 public class SaveData
 {
     public PlayerTollsSystem playerTools;
-    public float[] playerPosition; // [x, y, z]
+    public float[] playerPosition; 
 
     public SaveData(PlayerTollsSystem tools, Vector3 position)
     {
@@ -79,8 +79,8 @@ public class Save : MonoBehaviour
         string json = File.ReadAllText(savePath);
         SaveData data = JsonUtility.FromJson<SaveData>(json);
 
-        // Restaurar ferramentas
-        toolsSystem = data.playerTools;
+        
+       // toolsSystem = data.playerTools;
 
         // Restaurar posição do jogador
         player.position = data.GetPosition();
