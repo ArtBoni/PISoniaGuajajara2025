@@ -1,27 +1,20 @@
 using UnityEngine;
 
-public class BossBehaviour : MonoBehaviour
+public class Boss : MonoBehaviour
 {
     [SerializeField] Transform target;
-    [SerializeField] float actualLife;
-    
-    float currentLife = 100f;
-    float speed = 3f;
-    
-
-   
+    float speed = 6f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        currentLife = actualLife;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (target != null)
+       if(target != null)
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-       
     }
 }
