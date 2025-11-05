@@ -5,7 +5,7 @@ using UnityEngine;
 public class SlowWrite : MonoBehaviour
 {
     [SerializeField] private TMP_Text textComponent;
-
+    [SerializeField] GameObject fadeOut;
     [SerializeField] private string fullText;
     [SerializeField] private float delayPerChar = 0.05f; // tempo entre cada letra
     [SerializeField] private bool playOnStart = true;
@@ -23,7 +23,7 @@ public class SlowWrite : MonoBehaviour
         if (typingCoroutine != null)
         {
             StopCoroutine(typingCoroutine);
-             
+            fadeOut.SetActive(true);
         }
 
         typingCoroutine = StartCoroutine(TypeText(text));
