@@ -9,7 +9,10 @@ public class SlowWrite : MonoBehaviour
     [SerializeField] private string fullText;
     [SerializeField] private float delayPerChar = 0.05f; // tempo entre cada letra
     [SerializeField] private bool playOnStart = true;
-
+    [SerializeField] string[] texts;
+    [SerializeField] GameObject currentBg;
+    [SerializeField] GameObject[] backgrounds;
+    public SlowWrite instance;
     private Coroutine typingCoroutine;
 
     private void Start()
