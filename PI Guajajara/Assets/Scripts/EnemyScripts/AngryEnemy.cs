@@ -10,8 +10,8 @@ public class AngryEnemy : MonoBehaviour, IDamegabled
     [Header("Stun Settings")]
     [SerializeField] private float stunDuration = 1.5f; // quanto tempo fica atordoado
 
-    private float currentLife;
-    private float stunTimer = 0f;
+    float currentLife;
+    float stunTimer = 0f;
 
     private void Start()
     {
