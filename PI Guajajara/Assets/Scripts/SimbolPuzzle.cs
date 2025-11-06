@@ -30,7 +30,7 @@ public class SimbolPuzzle : MonoBehaviour
 
     private void OnMouseDown()
     {
-        
+        simbolsBTN.onClick.AddListener(() => print("Clicou no simbolo"));
     }
 
 
