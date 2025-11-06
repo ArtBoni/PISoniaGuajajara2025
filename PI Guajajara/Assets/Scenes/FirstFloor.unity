@@ -1043,7 +1043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fda88b74d6a717d43b854a12eb6966b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 1579629458}
   speed: 2
   maxLife: 20
   stunDuration: 3.5
@@ -41841,7 +41841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fda88b74d6a717d43b854a12eb6966b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 1579629458}
   speed: 2
   maxLife: 20
   stunDuration: 3.5
@@ -42600,7 +42600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fda88b74d6a717d43b854a12eb6966b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 1579629458}
   speed: 2
   maxLife: 20
   stunDuration: 3.5
@@ -43264,6 +43264,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1884558602}
   m_SourcePrefab: {fileID: 100100000, guid: b3743957935e4424cacdd1ea8dcb9430, type: 3}
+--- !u!4 &1579629458 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 751680152926337205, guid: b3743957935e4424cacdd1ea8dcb9430, type: 3}
+  m_PrefabInstance: {fileID: 1579629457}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1613604067
 GameObject:
   m_ObjectHideFlags: 0
@@ -43475,7 +43480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fda88b74d6a717d43b854a12eb6966b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 1579629458}
   speed: 2
   maxLife: 20
   stunDuration: 3.5
@@ -43687,7 +43692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fda88b74d6a717d43b854a12eb6966b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 1579629458}
   speed: 2
   maxLife: 20
   stunDuration: 3.5
@@ -45297,7 +45302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fda88b74d6a717d43b854a12eb6966b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 1579629458}
   speed: 2
   maxLife: 20
   stunDuration: 3.5
