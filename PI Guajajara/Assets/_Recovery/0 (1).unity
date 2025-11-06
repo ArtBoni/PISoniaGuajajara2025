@@ -283,37 +283,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1697017737}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &269107898
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 269107899}
-  m_Layer: 0
-  m_Name: Big man point
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &269107899
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 269107898}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.16, y: 4.49345, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &296619153
 GameObject:
   m_ObjectHideFlags: 0
@@ -949,7 +918,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &585038100
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1035,7 +1004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72f048d4dd2160945a42d8fefc54667e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossBehaviour
-  target: {fileID: 269107899}
+  target: {fileID: 1189411579}
   speed: 3
 --- !u!61 &585038103
 BoxCollider2D:
@@ -1292,7 +1261,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &694794416
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3442,7 +3411,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &3079583195800172535
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3593,4 +3562,3 @@ SceneRoots:
   - {fileID: 410932339}
   - {fileID: 1109964782}
   - {fileID: 585038101}
-  - {fileID: 269107899}
