@@ -9,17 +9,20 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: add5c836950821746936e9a901f2fa9d
   - enabled: 1
-    path: Assets/Scenes/Prologue.unity
-    guid: 003cb3894c4266d42ac19bf92c511d13
-  - enabled: 1
-    path: Assets/Scenes/TutorialFloor.unity
-    guid: c110e5722d113ee42a406ad8d6d710ed
-  - enabled: 1
-    path: Assets/Scenes/FloorDesing.unity
-    guid: 62b683c3335fc8c49b222bca909f13fb
+    path: Assets/Scenes/PreGameCutscene.unity
+    guid: 446ec1cec97608041b27dce0f42894bc
   - enabled: 1
     path: Assets/Scenes/FirstFloor.unity
     guid: 63b363080a1b2d64ea50a9b312309ce9
+  - enabled: 0
+    path: Assets/Scenes/Prologue.unity
+    guid: 003cb3894c4266d42ac19bf92c511d13
+  - enabled: 0
+    path: Assets/Scenes/TutorialFloor.unity
+    guid: c110e5722d113ee42a406ad8d6d710ed
+  - enabled: 0
+    path: Assets/Scenes/FloorDesing.unity
+    guid: 62b683c3335fc8c49b222bca909f13fb
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
