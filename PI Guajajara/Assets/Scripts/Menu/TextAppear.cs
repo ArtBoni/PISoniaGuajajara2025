@@ -1,6 +1,9 @@
+using JetBrains.Annotations;
 using System.Collections;
+using System.Xml;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SlowWrite : MonoBehaviour
 {
@@ -10,15 +13,42 @@ public class SlowWrite : MonoBehaviour
     [SerializeField] private float delayPerChar = 0.05f; // tempo entre cada letra
     [SerializeField] private bool playOnStart = true;
     [SerializeField] string[] texts;
+    int currentSection;
     [SerializeField] GameObject currentBg;
     [SerializeField] GameObject[] backgrounds;
-    public SlowWrite instance;
+    SlowWrite instance;
     private Coroutine typingCoroutine;
 
     private void Start()
     {
+        instance = this;
+        currentBg = backgrounds[currentSection = 0];
+        currentBg.SetActive(true);
         if (playOnStart && textComponent != null)
             StartTyping(fullText);
+    }
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("Jump"))
+        {
+            if (currentSection <= 3)
+            {
+                fullText = texts[currentSection += 1];
+                currentBg = backgrounds[currentSection];
+                fadeOut.SetActive(false);
+                fadeOut.SetActive(true);
+                StartCoroutine(StartText());
+            }
+            if (currentSection >= 3)
+            {
+                StartCoroutine(LoadLevel());
+                if (currentSection >= 4)
+                {
+                    SceneManager.LoadScene("FirstFloor");
+                }
+            }
+        }
     }
 
     public void StartTyping(string text)
@@ -26,7 +56,6 @@ public class SlowWrite : MonoBehaviour
         if (typingCoroutine != null)
         {
             StopCoroutine(typingCoroutine);
-            fadeOut.SetActive(true);
         }
 
         typingCoroutine = StartCoroutine(TypeText(text));
@@ -54,5 +83,16 @@ public class SlowWrite : MonoBehaviour
         }
 
         textComponent.text = fullText;
+    }
+    public IEnumerator StartText()
+    {
+        yield return new WaitForSeconds(2);
+        currentBg.SetActive(true);
+        StartTyping(fullText);
+    }
+    public IEnumerator LoadLevel()
+    {
+        yield return new WaitForSeconds(8);
+        SceneManager.LoadScene("FirstFloor");
     }
 }
