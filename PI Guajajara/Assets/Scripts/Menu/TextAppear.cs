@@ -88,6 +88,7 @@ public class SlowWrite : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         currentBg.SetActive(true);
+        backgrounds[currentSection - 1].SetActive(false);
         StartTyping(fullText);
     }
     public IEnumerator LoadLevel()
