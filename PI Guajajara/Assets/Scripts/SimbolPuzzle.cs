@@ -4,35 +4,34 @@ using UnityEngine.UI;
 
 public class SimbolPuzzle : MonoBehaviour
 {
-    Image simbol;
-    [SerializeField] GameObject painel;
-    
+    private Image simbol;
+    private Button simbolsBTN;
+
+
     private void Start()
     {
         simbol = GetComponent<Image>();
-        StartCoroutine(WaitColorToChange());
-        painel.SetActive(false);
-       
+        simbolsBTN = GetComponent<Button>();
+        StartCoroutine(ChangeColor(2f));
     }
 
-    
-
-    public IEnumerator WaitColorToChange()
+    public IEnumerator ChangeColor(float timeChange)
     {
-        float timeChenge = 2f;
-        while (true) 
+        
+        while (true)
         {
             simbol.color = Random.ColorHSV();
-            yield return new WaitForSeconds(timeChenge);
+            yield return new WaitForSeconds(timeChange);
         }
-              
+
+           
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    private void OnMouseDown()
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            painel.SetActive(true);
-        }
+        
     }
+
+
 }

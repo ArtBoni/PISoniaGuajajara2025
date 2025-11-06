@@ -6,7 +6,7 @@ public class BossBehaviour : MonoBehaviour
     [SerializeField] float actualLife;
     
     float currentLife = 100f;
-    float speed = 3f;
+    [SerializeField] float speed = 3f;
     
 
    
