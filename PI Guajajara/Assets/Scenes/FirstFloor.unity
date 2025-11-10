@@ -1046,6 +1046,7 @@ MonoBehaviour:
   target: {fileID: 1579629458}
   speed: 2
   maxLife: 20
+  damage: 10
   stunDuration: 3.5
 --- !u!61 &142747243
 BoxCollider2D:
@@ -41844,6 +41845,7 @@ MonoBehaviour:
   target: {fileID: 1579629458}
   speed: 2
   maxLife: 20
+  damage: 10
   stunDuration: 3.5
 --- !u!61 &1323218982
 BoxCollider2D:
@@ -42603,6 +42605,7 @@ MonoBehaviour:
   target: {fileID: 1579629458}
   speed: 2
   maxLife: 20
+  damage: 10
   stunDuration: 3.5
 --- !u!61 &1475747460
 BoxCollider2D:
@@ -43483,6 +43486,7 @@ MonoBehaviour:
   target: {fileID: 1579629458}
   speed: 2
   maxLife: 20
+  damage: 10
   stunDuration: 3.5
 --- !u!61 &1617465212
 BoxCollider2D:
@@ -43695,6 +43699,7 @@ MonoBehaviour:
   target: {fileID: 1579629458}
   speed: 2
   maxLife: 20
+  damage: 10
   stunDuration: 3.5
 --- !u!61 &1644793461
 BoxCollider2D:
@@ -45305,6 +45310,7 @@ MonoBehaviour:
   target: {fileID: 1579629458}
   speed: 2
   maxLife: 20
+  damage: 10
   stunDuration: 3.5
 --- !u!61 &1942050893
 BoxCollider2D:
