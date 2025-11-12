@@ -4,7 +4,7 @@ using UnityEngine;
 public class WaterRefilUI : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI waterTxt;
-    [SerializeField] float currentWater;
+    [SerializeField] public float currentWater;
 
     float maxWater = 15;
     private void Start()
@@ -14,6 +14,14 @@ public class WaterRefilUI : MonoBehaviour
 
     private void Update()
     {
+        waterTxt.text = currentWater + "/" + maxWater;
+
+
         
+    }
+
+   public void UpdateWaterQtd()
+    {
+        currentWater--;
     }
 }

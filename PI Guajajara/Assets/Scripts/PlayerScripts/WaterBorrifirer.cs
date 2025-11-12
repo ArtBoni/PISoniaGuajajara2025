@@ -16,10 +16,12 @@ public class WaterBorrifirer : MonoBehaviour
     [SerializeField] private AudioEvent OnWaterEvent;
 
     private Camera mainCam;
+    WaterRefilUI waterRefilUI;
 
     private void Start()
     {
         mainCam = Camera.main; 
+        waterRefilUI = FindAnyObjectByType<WaterRefilUI>();
     }
 
     private void Update()
@@ -28,6 +30,7 @@ public class WaterBorrifirer : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
+            
         }
     }
 
@@ -47,5 +50,6 @@ public class WaterBorrifirer : MonoBehaviour
             proj.SetDamage(damage);
         waterSound?.Play();
         OnWaterEvent?.Invoke(waterSound);
+        waterRefilUI.UpdateWaterQtd();
     }
 }
