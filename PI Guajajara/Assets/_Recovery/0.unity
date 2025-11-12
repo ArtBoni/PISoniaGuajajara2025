@@ -662,7 +662,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d1858bf70955524390abaea0c38dc0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  painel: {fileID: 694794415}
 --- !u!114 &410932341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -764,7 +763,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d1858bf70955524390abaea0c38dc0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  painel: {fileID: 0}
 --- !u!1 &500397540
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,7 +1547,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d1858bf70955524390abaea0c38dc0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  painel: {fileID: 0}
 --- !u!1 &1078453807
 GameObject:
   m_ObjectHideFlags: 0
@@ -1638,7 +1635,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d1858bf70955524390abaea0c38dc0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  painel: {fileID: 0}
 --- !u!1 &1109964778
 GameObject:
   m_ObjectHideFlags: 0
@@ -3379,6 +3375,7 @@ MonoBehaviour:
   target: {fileID: 1189411579}
   speed: 2
   maxLife: 20
+  damage: 10
   stunDuration: 3.5
 --- !u!1 &2983469240237958907
 GameObject:

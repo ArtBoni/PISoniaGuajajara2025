@@ -1,22 +1,25 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class AngryEnemy : MonoBehaviour, IDamegabled
 {
     [Header("Enemy Settings")]
     [SerializeField] private Transform target;
     [SerializeField] private float speed = 2f;
-    [SerializeField] private float maxLife = 20f;
+   
     [SerializeField] private float damage = 10f;
 
     [Header("Stun Settings")]
     [SerializeField] private float stunDuration = 1.5f; // quanto tempo fica atordoado
 
-    float currentLife;
+    [Header("Events")]
+    [SerializeField] UnityEvent OnHit;
+
     float stunTimer = 0f;
 
     private void Start()
     {
-        currentLife = maxLife;
+        
     }
 
     private void Update()
@@ -38,16 +41,15 @@ public class AngryEnemy : MonoBehaviour, IDamegabled
 
     public void Hit(float damage)
     {
-        currentLife -= damage;
-
+        
         // aplica stun sempre que leva dano
         stunTimer = stunDuration;
+        OnHit.Invoke();
 
-        if (currentLife <= 0)
-        {
-            Destroy(gameObject);
-        }
+
     }
+
+    
 
     
 }

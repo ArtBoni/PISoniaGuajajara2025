@@ -331,7 +331,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &296619154
 RectTransform:
   m_ObjectHideFlags: 0
@@ -949,7 +949,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &585038100
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3421,6 +3421,7 @@ MonoBehaviour:
   target: {fileID: 1189411579}
   speed: 2
   maxLife: 20
+  damage: 10
   stunDuration: 3.5
 --- !u!1 &2983469240237958907
 GameObject:
@@ -3442,7 +3443,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &3079583195800172535
 SpriteRenderer:
   m_ObjectHideFlags: 0
