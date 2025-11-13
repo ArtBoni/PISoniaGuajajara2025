@@ -26,7 +26,7 @@ public class WaterBorrifirer : MonoBehaviour
     
 
     private Camera mainCam;
-    float maxWater = 5;
+    float maxWater = 10;
 
     private void Start()
     {
