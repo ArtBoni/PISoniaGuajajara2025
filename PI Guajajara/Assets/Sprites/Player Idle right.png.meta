@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: 57103be1ed8cf8a43bf67fc8b8abeb0f
+guid: 840d72bc3fb6b6845a6d29b059964d09
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9060208968490209212
-    second: Color Puzzle OBJ_0
+      213: -8647371230083114250
+    second: Player Idle right_0
   - first:
-      213: 7249537983551655647
-    second: Color Puzzle OBJ_1
+      213: 8668854909717774623
+    second: Player Idle right_1
   - first:
-      213: -7652657405967959072
-    second: Color Puzzle OBJ_2
+      213: 5254440373729208523
+    second: Player Idle right_2
+  - first:
+      213: -2218479645309026689
+    second: Player Idle right_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -43,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -115,30 +118,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Color Puzzle OBJ_0
+      name: Player Idle right_0
       rect:
         serializedVersion: 2
-        x: 80
-        y: 532
-        width: 341
-        height: 434
+        x: 35
+        y: 127
+        width: 55
+        height: 119
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 440355a32fba34280800000000000000
-      internalID: -9060208968490209212
+      spriteID: 6fa96f59ead5ef780800000000000000
+      internalID: -8647371230083114250
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Color Puzzle OBJ_1
+      name: Player Idle right_1
       rect:
         serializedVersion: 2
-        x: 592
-        y: 532
-        width: 341
-        height: 434
+        x: 163
+        y: 127
+        width: 55
+        height: 119
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fde4c47e2688b9460800000000000000
-      internalID: 7249537983551655647
+      spriteID: f11012f5c95fd4870800000000000000
+      internalID: 8668854909717774623
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Color Puzzle OBJ_2
+      name: Player Idle right_2
       rect:
         serializedVersion: 2
-        x: 80
-        y: 20
-        width: 341
-        height: 434
+        x: 35
+        y: 0
+        width: 55
+        height: 118
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,8 +181,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0eb748182ac4cc590800000000000000
-      internalID: -7652657405967959072
+      spriteID: bc8a9914ea58be840800000000000000
+      internalID: 5254440373729208523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Idle right_3
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 0
+        width: 55
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7ebbef34806631e0800000000000000
+      internalID: -2218479645309026689
       vertices: []
       indices: 
       edges: []
@@ -211,9 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Color Puzzle OBJ_0: -9060208968490209212
-      Color Puzzle OBJ_1: 7249537983551655647
-      Color Puzzle OBJ_2: -7652657405967959072
+      Player Idle right_0: -8647371230083114250
+      Player Idle right_1: 8668854909717774623
+      Player Idle right_2: 5254440373729208523
+      Player Idle right_3: -2218479645309026689
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
