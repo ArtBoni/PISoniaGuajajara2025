@@ -1,36 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &457517941962167802
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 956306057328898945}
-  m_Layer: 0
-  m_Name: SokobanInstance
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &956306057328898945
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 457517941962167802}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.050843894, y: -0.40521765, z: 0}
-  m_LocalScale: {x: 0.29148573, y: 0.29148573, z: 0.29148573}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 751680152926337205}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1503311716943636228
 GameObject:
   m_ObjectHideFlags: 0
@@ -45,7 +14,6 @@ GameObject:
   - component: {fileID: 3219260252610054008}
   - component: {fileID: 1344226247758122126}
   - component: {fileID: 9080777967899634988}
-  - component: {fileID: 2092664310822330397}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -62,12 +30,11 @@ Transform:
   m_GameObject: {fileID: 1503311716943636228}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -41.5, y: 11.41948, z: 0}
+  m_LocalPosition: {x: -0.04, y: -3.697, z: 0}
   m_LocalScale: {x: 3.4307, y: 3.4307, z: 3.4307}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3628112953072316195}
-  - {fileID: 956306057328898945}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2448911762190891257
@@ -266,21 +233,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2092664310822330397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1503311716943636228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7606a3c92e0b3aa47b621068e28c6f85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PullBox
-  sokobanObj: {fileID: 0}
-  sokobanInstance: {fileID: 0}
-  distance: 0
 --- !u!1 &2967073792971006060
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,8 +311,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1222087045
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 1582538719285852202, guid: 77ec576b614a3ea45a6e6632bb43263c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -385,20 +337,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 973c24b7e020b684b8ddeb34fa68fd69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waterPrefab: {fileID: 7452247609057223504, guid: 133ca357a672d344e9777d8b12fb5c5e, type: 3}
+  waterPrefab: {fileID: 5024989751865316099, guid: 1e8663dde44dc6a49823fb68cae52415, type: 3}
   waterSpawnPoint: {fileID: 6715233486091695077}
   damage: 5
+  waterTxt: {fileID: 0}
+  currentWater: 0
   waterSound: {fileID: 0}
   OnWaterEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgument: {fileID: 8300000, guid: 1630a2b27b1208347aa62776b68dce35, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
