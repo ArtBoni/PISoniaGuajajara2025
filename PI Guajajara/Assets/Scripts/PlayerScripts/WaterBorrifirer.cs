@@ -7,6 +7,7 @@ public class AudioEvent : UnityEvent<AudioSource> { }
 
 public class WaterBorrifirer : MonoBehaviour
 {
+    public static WaterBorrifirer instance;
     [Header("Water Settings")]
     [SerializeField] private GameObject waterPrefab;
     [SerializeField] private Transform waterSpawnPoint;
@@ -30,6 +31,7 @@ public class WaterBorrifirer : MonoBehaviour
 
     private void Start()
     {
+        instance = this;
         mainCam = Camera.main;
         currentWater = maxWater;
         canShoot = true;
@@ -78,5 +80,10 @@ public class WaterBorrifirer : MonoBehaviour
         waterSound?.Play();
         OnWaterEvent?.Invoke(waterSound);
         
+    }
+    public void GetAmmo()
+    {
+        currentWater = maxWater;
+
     }
 }
