@@ -288,8 +288,9 @@ MonoBehaviour:
     muito alegres e animados."
   - "Infelizmente uma mega companhia que trabalha com a produ\xE7\xE3o e utiliza\xE7\xE3o
     de rob\xF4s invade a vila, a deixando em ru\xEDnas."
-  - "Agora voc\xEA, sob instru\xE7\xF5es da APIB, deve invadir a sede desta companhia
-    e prevenir ela de fazer isso com outras vilas no Brasil."
+  - "Agora voc\xEA, sob instru\xE7\xF5es da APIB (Articula\xE7\xE3o dos Povos Ind\xEDgenas
+    do Brasil), deve invadir a sede desta companhia e prevenir ela de fazer isso
+    com outras vilas no Brasil."
   - 
   currentBg: {fileID: 0}
   backgrounds:
@@ -346,7 +347,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -438}
+  m_AnchoredPosition: {x: 0, y: -415}
   m_SizeDelta: {x: 1536.58, y: 281.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &940656217
