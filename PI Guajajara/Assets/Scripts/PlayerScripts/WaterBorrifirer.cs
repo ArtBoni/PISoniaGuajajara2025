@@ -27,14 +27,12 @@ public class WaterBorrifirer : MonoBehaviour
 
     private Camera mainCam;
     float maxWater = 5;
-    bool canShoot = true;
 
     private void Start()
     {
         instance = this;
         mainCam = Camera.main;
         currentWater = maxWater;
-        canShoot = true;
 
     }
 
@@ -42,22 +40,17 @@ public class WaterBorrifirer : MonoBehaviour
     {
         waterTxt.text = currentWater + "/" + maxWater;
         AimAtMouse();
-        if(canShoot)
         if (Input.GetButtonDown("Fire1"))
         {
-            Shoot();
-            currentWater--;
-            
-        }
-
-        
-        
-        if (currentWater <= 0)
-        {
-            canShoot = false;
-            if (!canShoot)
-                return;
-                
+                if (currentWater >= 1)
+                {
+                    Shoot();
+                    currentWater--;
+                }
+                if (currentWater <= 0)
+                {
+                    return;
+                }
         }
         
         
@@ -73,7 +66,7 @@ public class WaterBorrifirer : MonoBehaviour
 
     void Shoot()
     {
-        GameObject bullet = Instantiate(waterPrefab, waterSpawnPoint.position, waterSpawnPoint.rotation);
+        GameObject bullet = Instantiate(waterPrefab, waterSpawnPoint.position, transform.rotation);
         WaterProjetil proj = bullet.GetComponent<WaterProjetil>();
         if (proj != null)
             proj.SetDamage(damage);
