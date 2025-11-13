@@ -940,7 +940,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 484916836}
-  - component: {fileID: 484916835}
   m_Layer: 0
   m_Name: WaterRefilUI OBJ
   m_TagString: Untagged
@@ -948,20 +947,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &484916835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 484916834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c09205661bf482840a46135446c56bda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WaterRefilUI
-  waterTxt: {fileID: 472099179}
-  currentWater: 0
 --- !u!4 &484916836
 Transform:
   m_ObjectHideFlags: 0
@@ -1266,11 +1251,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &673836884 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 457517941962167802, guid: b3743957935e4424cacdd1ea8dcb9430, type: 3}
-  m_PrefabInstance: {fileID: 1345721518}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &684778480
 GameObject:
   m_ObjectHideFlags: 0
@@ -2822,12 +2802,40 @@ PrefabInstance:
     - target: {fileID: 2092664310822330397, guid: b3743957935e4424cacdd1ea8dcb9430, type: 3}
       propertyPath: sokobanInstance
       value: 
-      objectReference: {fileID: 673836884}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
+      objectReference: {fileID: 0}
+    - target: {fileID: 2726981834704623261, guid: b3743957935e4424cacdd1ea8dcb9430, type: 3}
+      propertyPath: waterTxt
+      value: 
+      objectReference: {fileID: 472099179}
+    m_RemovedComponents:
+    - {fileID: 2092664310822330397, guid: b3743957935e4424cacdd1ea8dcb9430, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 457517941962167802, guid: b3743957935e4424cacdd1ea8dcb9430, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2967073792971006060, guid: b3743957935e4424cacdd1ea8dcb9430, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1345721520}
   m_SourcePrefab: {fileID: 100100000, guid: b3743957935e4424cacdd1ea8dcb9430, type: 3}
+--- !u!1 &1345721519 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2967073792971006060, guid: b3743957935e4424cacdd1ea8dcb9430, type: 3}
+  m_PrefabInstance: {fileID: 1345721518}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1345721520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345721519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c09205661bf482840a46135446c56bda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaterRefilUI
+  waterTxt: {fileID: 472099179}
+  currentWater: 0
 --- !u!1 &1453188908
 GameObject:
   m_ObjectHideFlags: 0

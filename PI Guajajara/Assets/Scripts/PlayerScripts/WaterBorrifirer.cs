@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,28 +11,50 @@ public class WaterBorrifirer : MonoBehaviour
     [SerializeField] private GameObject waterPrefab;
     [SerializeField] private Transform waterSpawnPoint;
     [SerializeField] private float damage = 5f;
+    [SerializeField] TextMeshProUGUI waterTxt;
+    [SerializeField] public float currentWater;
+
+    
 
     [Header("Audio")]
     [SerializeField] private AudioSource waterSound;
     [SerializeField] private AudioEvent OnWaterEvent;
 
     private Camera mainCam;
-    WaterRefilUI waterRefilUI;
+    float maxWater = 5;
+    bool canShoot = true;
 
     private void Start()
     {
-        mainCam = Camera.main; 
-        waterRefilUI = FindAnyObjectByType<WaterRefilUI>();
+        mainCam = Camera.main;
+        currentWater = maxWater;
+        canShoot = true;
+
     }
 
     private void Update()
     {
+        waterTxt.text = currentWater + "/" + maxWater;
         AimAtMouse();
+        if(canShoot)
         if (Input.GetButtonDown("Fire1"))
         {
+            canShoot = true;
             Shoot();
+            currentWater--;
             
         }
+
+        
+        
+        if (currentWater <= 0)
+        {
+            canShoot = false;
+            if (!canShoot)
+            Shoot();
+        }
+        
+        
     }
 
     void AimAtMouse()
@@ -50,6 +73,6 @@ public class WaterBorrifirer : MonoBehaviour
             proj.SetDamage(damage);
         waterSound?.Play();
         OnWaterEvent?.Invoke(waterSound);
-        waterRefilUI.UpdateWaterQtd();
+        
     }
 }
