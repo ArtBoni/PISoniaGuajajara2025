@@ -18,12 +18,11 @@ public class SimbolPuzzle : MonoBehaviour
     }
 
     public IEnumerator ChangeColor(float timeChange)
-    {   
-        while (true)
-        {
-           simbol.color = Random.ColorHSV();
-
-    }   }
+    {
+        timeChange = 2f;
+        yield return new WaitForSeconds(timeChange);
+        simbol.color = Random.ColorHSV();
+    }   
 
     private void OnMouseDown()
     {
