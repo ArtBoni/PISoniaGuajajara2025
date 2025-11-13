@@ -20,6 +20,10 @@ public class WaterBorrifirer : MonoBehaviour
     [SerializeField] private AudioSource waterSound;
     [SerializeField] private AudioEvent OnWaterEvent;
 
+
+    [Header("UnityEvents")]
+    
+
     private Camera mainCam;
     float maxWater = 5;
     bool canShoot = true;
@@ -39,7 +43,6 @@ public class WaterBorrifirer : MonoBehaviour
         if(canShoot)
         if (Input.GetButtonDown("Fire1"))
         {
-            canShoot = true;
             Shoot();
             currentWater--;
             
@@ -51,7 +54,8 @@ public class WaterBorrifirer : MonoBehaviour
         {
             canShoot = false;
             if (!canShoot)
-            Shoot();
+                return;
+                
         }
         
         
