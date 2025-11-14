@@ -51656,6 +51656,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 751680152926337205, guid: b3743957935e4424cacdd1ea8dcb9430, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 751680152926337205, guid: b3743957935e4424cacdd1ea8dcb9430, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 751680152926337205, guid: b3743957935e4424cacdd1ea8dcb9430, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 751680152926337205, guid: b3743957935e4424cacdd1ea8dcb9430, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.04
       objectReference: {fileID: 0}
@@ -51719,6 +51731,18 @@ PrefabInstance:
       propertyPath: OnWaterEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 542566044}
+    - target: {fileID: 3004443527952257003, guid: b3743957935e4424cacdd1ea8dcb9430, type: 3}
+      propertyPath: m_Size.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3004443527952257003, guid: b3743957935e4424cacdd1ea8dcb9430, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9080777967899634988, guid: b3743957935e4424cacdd1ea8dcb9430, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9058b7b1c2df044488303d251db67fda, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -53261,7 +53285,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -255, y: -197}
+  m_AnchoredPosition: {x: -217.2, y: -173.6}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1777029308
