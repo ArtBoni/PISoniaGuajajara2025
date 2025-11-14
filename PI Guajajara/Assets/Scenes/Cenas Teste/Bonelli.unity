@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 530440201}
   - component: {fileID: 530440202}
+  - component: {fileID: 530440203}
   m_Layer: 0
   m_Name: Elevator
   m_TagString: Untagged
@@ -145,7 +146,7 @@ Transform:
   m_GameObject: {fileID: 530440200}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.22, y: 2.05, z: 0}
+  m_LocalPosition: {x: 0.22, y: 1.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -178,6 +179,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &530440203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530440200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1611981c8cf6dd846a517513517c5ad3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ElevatorGoUp
 --- !u!1 &648449698
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,6 +338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 726321951}
   - component: {fileID: 726321952}
+  - component: {fileID: 726321953}
   m_Layer: 0
   m_Name: Doors
   m_TagString: Untagged
@@ -357,7 +371,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 726321950}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 549bc6d7c1704a444953b3d7832cb2b1, type: 2}
   m_CullingMode: 0
@@ -371,6 +385,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &726321953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726321950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eafbf0b163b9bc4f8b1c08dab2650c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ElevatorDoors
 --- !u!1 &762510832
 GameObject:
   m_ObjectHideFlags: 0
@@ -1081,7 +1107,7 @@ Transform:
   m_GameObject: {fileID: 1892736637}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.06999999, y: 0.0725801, z: 0}
+  m_LocalPosition: {x: 0.06999999, y: -1.387, z: 0}
   m_LocalScale: {x: 2.0175, y: 0.3808, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1343,6 +1369,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Elevator
   barrier: {fileID: 1892736637}
   rideTime: 2
+  playDoorAnims:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 726321953}
+        m_TargetAssemblyTypeName: ElevatorDoors, Assembly-CSharp
+        m_MethodName: PlayAnima
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  playElevatorAnims:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 530440203}
+        m_TargetAssemblyTypeName: ElevatorGoUp, Assembly-CSharp
+        m_MethodName: PlayAnima
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2057130817
 GameObject:
   m_ObjectHideFlags: 0
