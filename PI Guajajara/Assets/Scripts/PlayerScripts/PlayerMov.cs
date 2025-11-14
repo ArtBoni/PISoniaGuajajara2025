@@ -14,6 +14,7 @@ public class PlayerMov : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private Rigidbody2D rb;
+    
 
     void Start()
     {
@@ -28,9 +29,11 @@ public class PlayerMov : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
+        animator.SetBool("isWalking", horizontal != 0 || vertical != 0);
+        spriteRenderer.flipX = horizontal < 0;      
+        
 
-        animator.SetFloat("X", horizontal);
-        animator.SetFloat("Y", vertical);
+
 
         if (Input.GetButtonDown("Cancel"))
         {
