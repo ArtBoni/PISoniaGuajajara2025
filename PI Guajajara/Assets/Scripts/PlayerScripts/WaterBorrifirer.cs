@@ -14,8 +14,8 @@ public class WaterBorrifirer : MonoBehaviour
     [SerializeField] private float damage = 5f;
     [SerializeField] TextMeshProUGUI waterTxt;
     [SerializeField] public float currentWater;
+    [SerializeField] private HudDoPlayer ammoHUD;   
 
-    
 
     [Header("Audio")]
     [SerializeField] private AudioSource waterSound;
@@ -30,6 +30,7 @@ public class WaterBorrifirer : MonoBehaviour
 
     private void Start()
     {
+        ammoHUD.UpdateAmmo((int)currentWater, (int)maxWater);
         instance = this;
         mainCam = Camera.main;
         currentWater = maxWater;
@@ -42,6 +43,7 @@ public class WaterBorrifirer : MonoBehaviour
         AimAtMouse();
         if (Input.GetButtonDown("Fire1"))
         {
+
                 if (currentWater >= 1)
                 {
                     Shoot();
@@ -51,6 +53,7 @@ public class WaterBorrifirer : MonoBehaviour
                 {
                     return;
                 }
+            ammoHUD.UpdateAmmo((int)currentWater, (int)maxWater);
         }
         
         
@@ -77,6 +80,6 @@ public class WaterBorrifirer : MonoBehaviour
     public void GetAmmo()
     {
         currentWater = maxWater;
-
+        ammoHUD.UpdateAmmo((int)currentWater, (int)maxWater);
     }
 }
