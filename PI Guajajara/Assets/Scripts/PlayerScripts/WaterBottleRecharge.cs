@@ -31,7 +31,6 @@ public class WaterBottleRecharge : MonoBehaviour
         {
             canReload = true;
             reloadObject = reloadObj;
-            print("ReloadPossible");
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
