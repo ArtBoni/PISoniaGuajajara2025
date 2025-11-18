@@ -8,12 +8,14 @@ public class PlayerMov : MonoBehaviour
     [SerializeField] private float speed = 5f;
     [SerializeField] private UnityEvent OnPause;
     [SerializeField] private UnityEvent OnUnPause;
+    [SerializeField] float currentLife;
 
     private float horizontal, vertical;
     private bool isPaused;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private Rigidbody2D rb;
+    float maxlife = 3;
     
 
     void Start()
@@ -21,8 +23,8 @@ public class PlayerMov : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        
         isPaused = false;
+        maxlife = currentLife;
     }
 
     void Update()
