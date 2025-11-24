@@ -4700,7 +4700,6 @@ MonoBehaviour:
   OnUnPause:
     m_PersistentCalls:
       m_Calls: []
-  currentLife: 0
 --- !u!50 &921052927
 Rigidbody2D:
   serializedVersion: 5
