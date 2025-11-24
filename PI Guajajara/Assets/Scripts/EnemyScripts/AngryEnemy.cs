@@ -48,8 +48,15 @@ public class AngryEnemy : MonoBehaviour, IDamegabled
 
 
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.TryGetComponent<PlayerMov>(out PlayerMov player))
+        {
+            player.TakeDamage(1);
+            Debug.Log("Inimigo causou dano no player!");
+        }
+    }
 
-    
 
-    
+
 }
