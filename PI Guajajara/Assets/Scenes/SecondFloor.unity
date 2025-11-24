@@ -7527,7 +7527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fda88b74d6a717d43b854a12eb6966b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 887067347}
   speed: 2
   damage: 10
   stunDuration: 3.5
@@ -7841,7 +7841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fda88b74d6a717d43b854a12eb6966b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 887067347}
   speed: 2
   damage: 10
   stunDuration: 3.5
@@ -8080,7 +8080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fda88b74d6a717d43b854a12eb6966b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 887067347}
   speed: 2
   damage: 10
   stunDuration: 3.5
@@ -9082,6 +9082,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1958612927}
   m_SourcePrefab: {fileID: 100100000, guid: 3053ebf63c98f964b8db054d02a0df8a, type: 3}
+--- !u!4 &887067347 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2608297468439533868, guid: 3053ebf63c98f964b8db054d02a0df8a, type: 3}
+  m_PrefabInstance: {fileID: 887067346}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &899567200
 GameObject:
   m_ObjectHideFlags: 0
@@ -10330,7 +10335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fda88b74d6a717d43b854a12eb6966b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 887067347}
   speed: 2
   damage: 10
   stunDuration: 3.5
@@ -32112,7 +32117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fda88b74d6a717d43b854a12eb6966b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 887067347}
   speed: 2
   damage: 10
   stunDuration: 3.5
@@ -32989,7 +32994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fda88b74d6a717d43b854a12eb6966b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 887067347}
   speed: 2
   damage: 10
   stunDuration: 3.5
