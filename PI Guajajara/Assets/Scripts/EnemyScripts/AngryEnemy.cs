@@ -16,10 +16,12 @@ public class AngryEnemy : MonoBehaviour, IDamegabled
     [SerializeField] UnityEvent OnHit;
 
     float stunTimer = 0f;
+    Animator animator;
 
     private void Start()
     {
-        
+        animator = GetComponent<Animator>();
+        animator.SetBool("isStun", false);
     }
 
     private void Update()
@@ -44,9 +46,13 @@ public class AngryEnemy : MonoBehaviour, IDamegabled
         
         // aplica stun sempre que leva dano
         stunTimer = stunDuration;
+        animator.SetBool("isStun", true);
         OnHit.Invoke();
 
-
+        if(stunDuration <= 0)
+        {
+            animator.SetBool("isStun", false);
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
