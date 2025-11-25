@@ -21,6 +21,7 @@ public class LaserHitbox : MonoBehaviour
         {
             laserActive.Invoke();
             alarms.SetActive(true);
+            gameObject.SetActive(false);
         }
     }
 }
