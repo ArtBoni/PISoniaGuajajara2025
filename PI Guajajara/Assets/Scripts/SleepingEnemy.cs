@@ -90,9 +90,12 @@ public class SleepingEnemy : MonoBehaviour, IDamegabled
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (gameObject.TryGetComponent(out ISleepyDamage sleepyObj))
+        if (isAngry == true)
         {
-            sleepyObj.SleepyDamage();
+            if (gameObject.TryGetComponent(out ISleepyDamage sleepyObj))
+            {
+                sleepyObj.SleepyDamage();
+            }
         }
     }
 }
