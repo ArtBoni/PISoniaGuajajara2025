@@ -2,8 +2,9 @@ using UnityEngine;
 using UnityEngine.Events;
 public class LaserHitbox : MonoBehaviour
 {
-    public UnityEvent laserActive;
-    public GameObject alarms;
+    [SerializeField] UnityEvent laserActive;
+    [SerializeField] GameObject alarms;
+    [SerializeField] private GameObject laser;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
