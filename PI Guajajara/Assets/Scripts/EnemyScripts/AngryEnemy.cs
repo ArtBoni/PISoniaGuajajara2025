@@ -5,9 +5,9 @@ public class AngryEnemy : MonoBehaviour, IDamegabled
 {
     [Header("Enemy Settings")]
     [SerializeField] private Transform target;
-    [SerializeField] private float speed = 2f;
+    [SerializeField] private float speed;
    
-    [SerializeField] private float damage = 10f;
+    [SerializeField] private float damage = 10;
 
     [Header("Stun Settings")]
     [SerializeField] private float stunDuration = 1.5f; // quanto tempo fica atordoado
@@ -15,29 +15,32 @@ public class AngryEnemy : MonoBehaviour, IDamegabled
     [Header("Events")]
     [SerializeField] UnityEvent OnHit;
 
-    float stunTimer = 0f;
+    float stunTimer = 0;
     Animator animator;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
         animator.SetBool("isStun", false);
+        //StopAngry();
     }
 
     private void Update()
     {
         
         // diminui o tempo de stun a cada frame
-        if (stunTimer > 0)
-        {
+        if(animator.GetBool("isStun"))
             stunTimer -= Time.deltaTime;
-            return; // enquanto estiver stunado não se move
-        }
 
         // se o transform não for nulo ele persegue o alvo
-        if (target != null)
+        if (target != null && !animator.GetBool("isStun"))
         {
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        }
+
+        if (stunTimer <= 0)
+        {
+            animator.SetBool("isStun", false);
         }
     }
 
@@ -49,10 +52,7 @@ public class AngryEnemy : MonoBehaviour, IDamegabled
         animator.SetBool("isStun", true);
         OnHit.Invoke();
 
-        if(stunDuration <= 0)
-        {
-            animator.SetBool("isStun", false);
-        }
+       
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -63,6 +63,12 @@ public class AngryEnemy : MonoBehaviour, IDamegabled
         }
     }
 
-
-
+    public void TurnAngry()
+    {
+        speed = 2;
+    }
+    public void StopAngry()
+    {
+        speed = 0;
+    }
 }
