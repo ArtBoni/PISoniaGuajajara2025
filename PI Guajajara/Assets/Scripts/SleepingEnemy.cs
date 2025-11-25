@@ -1,17 +1,20 @@
+using System.Collections;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.Events;
 
-public interface IDamage
+public interface ISleepyDamage
 {
-    void Damage();
+    void SleepyDamage();
 }
-public class AngryEnemy : MonoBehaviour, IDamegabled
+
+public class SleepingEnemy : MonoBehaviour, IDamegabled
 {
     [Header("Enemy Settings")]
     [SerializeField] private Transform target;
-    [SerializeField] private float speed;
-   
-    [SerializeField] private float damage = 10;
+    [SerializeField] private int speed;
+
+    [SerializeField] private int damage;
 
     [Header("Stun Settings")]
     [SerializeField] private float stunDuration = 1.5f; // quanto tempo fica atordoado
@@ -22,19 +25,22 @@ public class AngryEnemy : MonoBehaviour, IDamegabled
     float stunTimer = 0;
     Animator animator;
 
+    [SerializeField] GameObject alarm;
+    [SerializeField] GameObject alarmSound;
+    bool isAngry = false;
     private void Start()
     {
-        animator.SetBool("isSleeping", false);
         animator = GetComponent<Animator>();
         animator.SetBool("isStun", false);
+        
         //StopAngry();
     }
 
     private void Update()
     {
-        
+
         // diminui o tempo de stun a cada frame
-        if(animator.GetBool("isStun"))
+        if (animator.GetBool("isStun"))
             stunTimer -= Time.deltaTime;
 
         // se o transform não for nulo ele persegue o alvo
@@ -51,21 +57,42 @@ public class AngryEnemy : MonoBehaviour, IDamegabled
 
     public void Hit(float damage)
     {
-        
-        // aplica stun sempre que leva dano
-        stunTimer = stunDuration;
-        animator.SetBool("isStun", true);
-        OnHit.Invoke();
 
-       
+        // aplica stun sempre que leva dano
+        if (isAngry == true)
+        {
+            stunTimer = stunDuration;
+            animator.SetBool("isStun", true);
+            OnHit.Invoke();
+        }
+
     }
 
     public void TurnAngry()
     {
         speed = 2;
+        animator.SetBool("isSleeping", false);
+        isAngry = true;
     }
     public void StopAngry()
     {
         speed = 0;
+        animator.SetBool("isSleeping", true);
+        isAngry = false;
+    }
+
+    public IEnumerator StopAngryTime()
+    {
+        yield return new WaitForSeconds(10);
+        StopAngry();
+        alarm.SetActive(false);
+        alarmSound.SetActive(false);    
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (gameObject.TryGetComponent(out ISleepyDamage sleepyObj))
+        {
+            sleepyObj.SleepyDamage();
+        }
     }
 }

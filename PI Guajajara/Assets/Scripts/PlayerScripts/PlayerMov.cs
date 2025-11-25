@@ -1,17 +1,15 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(BoxCollider2D))]
 [RequireComponent(typeof(Rigidbody2D))]
-public class PlayerMov : MonoBehaviour
+public class PlayerMov : MonoBehaviour, ISleepyDamage
 {
     [SerializeField] private HudDoPlayer hud;
     [SerializeField] private float speed = 5f;
     [SerializeField] private UnityEvent OnPause;
     [SerializeField] private UnityEvent OnUnPause;
-    [SerializeField] float currentLife;
-    public float MaxLife => maxlife;
-    public float CurrentLife => currentLife;
 
     private float horizontal, vertical;
     private bool isPaused;
@@ -27,9 +25,6 @@ public class PlayerMov : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         isPaused = false;
-        currentLife = 3;
-        maxlife = 3;
-        hud.UpdateLife((int)currentLife, (int)maxlife);
     }
 
     void Update()
@@ -78,15 +73,8 @@ public class PlayerMov : MonoBehaviour
             Time.timeScale = 1;
         }
     }
-    public void TakeDamage(int amount)
+    public void SleepyDamage()
     {
-        currentLife -= amount;
-        hud.UpdateLife((int)currentLife, (int)maxlife);
-
-        if (currentLife <= 0)
-        {
-            currentLife = 0;
-            Debug.Log("PLAYER MORREU!");
-        }
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

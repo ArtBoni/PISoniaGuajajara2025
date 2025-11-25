@@ -2,9 +2,9 @@ using UnityEngine;
 using UnityEngine.Events;
 public class LaserHitbox : MonoBehaviour
 {
-    [SerializeField] UnityEvent laserActive;
+    public UnityEvent laserActive;
     [SerializeField] GameObject alarms;
-    [SerializeField] private GameObject laser;
+    [SerializeField] GameObject alarmSounds;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,6 +23,7 @@ public class LaserHitbox : MonoBehaviour
             laserActive.Invoke();
             alarms.SetActive(true);
             gameObject.SetActive(false);
+            alarmSounds.SetActive(true);
         }
     }
 }
