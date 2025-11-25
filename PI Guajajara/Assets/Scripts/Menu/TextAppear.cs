@@ -25,10 +25,10 @@ public class SlowWrite : MonoBehaviour
     int index = 0;
     private void Start()
     {
-           
         instance = this;
         currentBg = backgrounds[currentSection = 0];
         currentBg.SetActive(true);
+        NextSound();
         if (playOnStart && textComponent != null)
             StartTyping(fullText);
     }
@@ -39,6 +39,7 @@ public class SlowWrite : MonoBehaviour
         {
             if (currentSection <= 3)
             {
+                NextSound();
                 fullText = texts[currentSection += 1];
                 currentBg = backgrounds[currentSection];
                 fadeOut.SetActive(false);
@@ -93,7 +94,7 @@ public class SlowWrite : MonoBehaviour
     }
     public IEnumerator StartText()
     {
-        NextSound();
+        
         yield return new WaitForSeconds(2);
         currentBg.SetActive(true);
         backgrounds[currentSection - 1].SetActive(false);

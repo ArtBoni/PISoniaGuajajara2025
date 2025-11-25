@@ -301,6 +301,8 @@ MonoBehaviour:
   sounds:
   - {fileID: 8300000, guid: 1ddac1044f11d2047b9642abe717a6d9, type: 3}
   - {fileID: 8300000, guid: ad7c3b1898ed8d341ac27c4c7638c750, type: 3}
+  - {fileID: 8300000, guid: 02718835eac0e30419c390dd4ad5f29d, type: 3}
+  - {fileID: 8300000, guid: 1ddac1044f11d2047b9642abe717a6d9, type: 3}
   audioSource: {fileID: 593104387}
 --- !u!4 &360307028
 Transform:
@@ -349,7 +351,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
