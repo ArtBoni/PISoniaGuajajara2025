@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SequencePuzzle : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class SequencePuzzle : MonoBehaviour
     [Header("Object To Activate When Solved")]
     [SerializeField] private GameObject objectToActivate;
 
+
+    [SerializeField] UnityEvent OnWrongPuzzle, OnCorrectPuzzle;
     public void PressButton(int id)
     {
         playerOrder.Add(id);
@@ -20,6 +23,7 @@ public class SequencePuzzle : MonoBehaviour
         // Wrong input
         if (playerOrder[index] != correctOrder[index])
         {
+            OnWrongPuzzle.Invoke();
             Debug.Log("Wrong sequence! Resetting...");
             playerOrder.Clear();
         }
@@ -27,6 +31,7 @@ public class SequencePuzzle : MonoBehaviour
         // Completed sequence
         if (playerOrder.Count == correctOrder.Count)
         {
+            OnCorrectPuzzle.Invoke();
             Debug.Log("Puzzle Solved!");
             SolvePuzzle();
         }
