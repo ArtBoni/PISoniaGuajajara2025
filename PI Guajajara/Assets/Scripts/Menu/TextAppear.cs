@@ -3,6 +3,7 @@ using System.Collections;
 using System.Xml;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class SlowWrite : MonoBehaviour
@@ -19,8 +20,12 @@ public class SlowWrite : MonoBehaviour
     SlowWrite instance;
     private Coroutine typingCoroutine;
 
+    [SerializeField] AudioClip[] sounds;
+    [SerializeField] AudioSource audioSource;
+    int index = 0;
     private void Start()
     {
+           
         instance = this;
         currentBg = backgrounds[currentSection = 0];
         currentBg.SetActive(true);
@@ -39,6 +44,7 @@ public class SlowWrite : MonoBehaviour
                 fadeOut.SetActive(false);
                 fadeOut.SetActive(true);
                 StartCoroutine(StartText());
+                
             }
             if (currentSection >= 3)
             {
@@ -80,20 +86,35 @@ public class SlowWrite : MonoBehaviour
         {
             StopCoroutine(typingCoroutine);
             typingCoroutine = null;
+           
         }
 
         textComponent.text = fullText;
     }
     public IEnumerator StartText()
     {
+        NextSound();
         yield return new WaitForSeconds(2);
         currentBg.SetActive(true);
         backgrounds[currentSection - 1].SetActive(false);
         StartTyping(fullText);
+        
     }
     public IEnumerator LoadLevel()
     {
         yield return new WaitForSeconds(8);
         SceneManager.LoadScene("FirstFloor");
+    }
+
+    public void NextSound()
+    {
+        audioSource.clip = sounds[index];
+        audioSource.Play();
+
+        index++;
+        if(index >= sounds.Length)
+        {
+            index = 0;
+        }
     }
 }
