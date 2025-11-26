@@ -33,8 +33,7 @@ public class AngryEnemy : MonoBehaviour, IDamegabled
     private void Update()
     {
         
-        // diminui o tempo de stun a cada frame
-        if(animator.GetBool("isStun"))
+        //if(animator.GetBool("isStun"))
             stunTimer -= Time.deltaTime;
 
         // se o transform não for nulo ele persegue o alvo
