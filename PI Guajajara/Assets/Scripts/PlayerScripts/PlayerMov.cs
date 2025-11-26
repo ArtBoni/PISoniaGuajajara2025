@@ -41,12 +41,12 @@ public class PlayerMov : MonoBehaviour, ISleepyDamage
         {
             if (Time.timeScale == 0)
             {
-                Time.timeScale = 1;
+               
                 OnUnPause?.Invoke();
             }
             else
             {
-                Time.timeScale = 0;
+                
                 OnPause?.Invoke();
             }
         }

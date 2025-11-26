@@ -4990,6 +4990,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3262a89a24e40f2449c76d41d8233208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaterBottleRecharge
+  OnReloadSound:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &1840842807
 BoxCollider2D:
   m_ObjectHideFlags: 0
