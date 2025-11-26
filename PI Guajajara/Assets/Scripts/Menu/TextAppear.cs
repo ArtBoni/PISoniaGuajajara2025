@@ -20,6 +20,7 @@ public class SlowWrite : MonoBehaviour
     SlowWrite instance;
     private Coroutine typingCoroutine;
 
+    [SerializeField] int nextScene;
     [SerializeField] AudioClip[] sounds;
     [SerializeField] AudioSource audioSource;
     int index = 0;
@@ -52,7 +53,7 @@ public class SlowWrite : MonoBehaviour
                 StartCoroutine(LoadLevel());
                 if (currentSection >= 4)
                 {
-                    SceneManager.LoadScene("FirstFloor");
+                    SceneManager.LoadScene(nextScene);
                 }
             }
         }
