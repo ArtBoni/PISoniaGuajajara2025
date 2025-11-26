@@ -10,7 +10,7 @@ public class SequencePuzzle : MonoBehaviour
     private List<int> playerOrder = new List<int>();
 
     [Header("Object To Activate When Solved")]
-    [SerializeField] private GameObject objectToActivate;
+    [SerializeField] private UnityEvent OnObjectToActivate;
 
 
     [SerializeField] UnityEvent OnWrongPuzzle, OnCorrectPuzzle;
@@ -41,7 +41,6 @@ public class SequencePuzzle : MonoBehaviour
 
     private void SolvePuzzle()
     {
-        if (objectToActivate != null)
-            objectToActivate.SetActive(true);
+        OnObjectToActivate.Invoke();
     }
 }
