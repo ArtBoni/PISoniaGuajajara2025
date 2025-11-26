@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public interface IReloadable
 {
@@ -8,10 +9,14 @@ public class WaterBottleRecharge : MonoBehaviour
 {
     bool canReload;
     IReloadable reloadObject;
+
+    [SerializeField] UnityEvent OnReloadSound;
+    
+   
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
@@ -22,6 +27,7 @@ public class WaterBottleRecharge : MonoBehaviour
             if (Input.GetButtonDown("Fire2"))
             { 
                 reloadObject.Reload();
+                OnReloadSound.Invoke();
             }
         }
     }

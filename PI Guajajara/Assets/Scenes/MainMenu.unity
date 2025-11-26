@@ -1020,7 +1020,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.8096924, y: -16.37}
+  m_AnchoredPosition: {x: 0.76, y: -16.37}
   m_SizeDelta: {x: 952.72, y: 291.89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &670100272
@@ -1043,8 +1043,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Feito por:\n\nPrograma\xE7\xE3o:\nJosu\xE9 Ramos F. Petri\n\nArte: \nBernardo
-    Rocha\n\nDesigner e Programador\nArthur Veras Bonelli\n\nAssets utilizados\n\n\nFeonY\nComplete_UI_Essential"
+  m_text: "Feito por:\n\nPrograma\xE7\xE3o, Designer e Arte:\nJosu\xE9 Ramos F. Petri\n\nPrograma\xE7\xE3o,
+    Designer e Arte: \nBernardo Rocha\n\nPrograma\xE7\xE3o, Designer e Arte:\nArthur
+    Veras Bonelli\n\nAssets utilizados\n\nArtes no geral por Bernardo Rocha\n\nSons:
+    Fresound"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1109,7 +1111,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: -388.87396}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1319,7 +1321,7 @@ SpriteRenderer:
   m_Size: {x: 4.8, y: 2.7}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &682482365
@@ -1450,7 +1452,7 @@ Transform:
   m_GameObject: {fileID: 885726632}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.991707, y: 71, z: -8500.619}
+  m_LocalPosition: {x: -5.991707, y: 436, z: -8500.619}
   m_LocalScale: {x: 101.03588, y: 101.03588, z: 101.03588}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2295,8 +2297,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 3.0615845, y: 113.556885}
-  m_SizeDelta: {x: 1760.0001, y: 1050}
+  m_AnchoredPosition: {x: 3.0615845, y: 115.19}
+  m_SizeDelta: {x: 1760, y: 1159.73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1372499470
 MonoBehaviour:
@@ -2663,7 +2665,7 @@ GameObject:
   - component: {fileID: 2041773663}
   - component: {fileID: 2041773662}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: Theme
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2680,9 +2682,9 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: b6bd5c15754505a47966f5f9e250b32c, type: 3}
+  m_Resource: {fileID: 8300000, guid: 35e660754e7e8434686df5f5ad0e6fd3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.47
+  m_Volume: 0.626
   m_Pitch: 1
   Loop: 1
   Mute: 0
