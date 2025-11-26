@@ -75,6 +75,6 @@ public class PlayerMov : MonoBehaviour, ISleepyDamage
     }
     public void SleepyDamage()
     {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

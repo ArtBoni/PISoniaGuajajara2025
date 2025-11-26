@@ -73,6 +73,7 @@ public class SleepingEnemy : MonoBehaviour, IDamegabled
         speed = 2;
         animator.SetBool("isSleeping", false);
         isAngry = true;
+        StartCoroutine(StopAngryTime());
     }
     public void StopAngry()
     {
@@ -83,7 +84,7 @@ public class SleepingEnemy : MonoBehaviour, IDamegabled
 
     public IEnumerator StopAngryTime()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(5);
         StopAngry();
         alarm.SetActive(false);
         alarmSound.SetActive(false);    
@@ -92,7 +93,7 @@ public class SleepingEnemy : MonoBehaviour, IDamegabled
     {
         if (isAngry == true)
         {
-            if (gameObject.TryGetComponent(out ISleepyDamage sleepyObj))
+            if (collision.gameObject.TryGetComponent(out ISleepyDamage sleepyObj))
             {
                 sleepyObj.SleepyDamage();
             }
