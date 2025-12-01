@@ -31,7 +31,7 @@ public class SleepingEnemy : MonoBehaviour, IDamegabled
     {
         animator = GetComponent<Animator>();
         animator.SetBool("isStun", false);
-        
+        animator.SetBool("isSleeping", true);
         //StopAngry();
     }
 

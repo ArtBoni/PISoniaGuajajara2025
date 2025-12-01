@@ -34,7 +34,10 @@ public class PlayerMov : MonoBehaviour, ISleepyDamage
         animator.SetBool("isWalking", horizontal != 0 || vertical != 0);
         spriteRenderer.flipX = horizontal < 0;      
         
-
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SleepyDamage();
+        }
 
 
         if (Input.GetButtonDown("Cancel"))
@@ -77,4 +80,5 @@ public class PlayerMov : MonoBehaviour, ISleepyDamage
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+    
 }

@@ -24,6 +24,7 @@ public class SlowWrite : MonoBehaviour
     [SerializeField] AudioClip[] sounds;
     [SerializeField] AudioSource audioSource;
     int index = 0;
+    [SerializeField] GameObject spaceKey;
     private void Start()
     {
         instance = this;
@@ -64,6 +65,7 @@ public class SlowWrite : MonoBehaviour
         if (typingCoroutine != null)
         {
             StopCoroutine(typingCoroutine);
+            spaceKey.SetActive(true);
         }
 
         typingCoroutine = StartCoroutine(TypeText(text));
