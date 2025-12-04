@@ -37,7 +37,7 @@ public class SlowWrite : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetMouseButton(0))
         {
             if (currentSection <= 3)
             {
