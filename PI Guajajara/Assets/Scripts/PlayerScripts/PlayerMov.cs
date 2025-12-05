@@ -17,10 +17,12 @@ public class PlayerMov : MonoBehaviour, ISleepyDamage
     private Animator animator;
     private Rigidbody2D rb;
     float maxlife = 3;
-    
 
+    [SerializeField] Joystick moveJoyStick;
+    Vector2 movement;
     void Start()
     {
+        
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
@@ -29,8 +31,14 @@ public class PlayerMov : MonoBehaviour, ISleepyDamage
 
     void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal");
-        vertical = Input.GetAxisRaw("Vertical");
+        if(moveJoyStick != null)
+        {
+            horizontal = Input.GetAxis("Horizontal") + moveJoyStick.Horizontal;
+            vertical = Input.GetAxis("Vertical") + moveJoyStick.Vertical;
+        }
+        movement = movement.normalized;
+        //horizontal = Input.GetAxisRaw("Horizontal");
+        //vertical = Input.GetAxisRaw("Vertical");
         animator.SetBool("isWalking", horizontal != 0 || vertical != 0);
         spriteRenderer.flipX = horizontal < 0;      
         
@@ -57,7 +65,11 @@ public class PlayerMov : MonoBehaviour, ISleepyDamage
 
     private void FixedUpdate()
     {
+       
         rb.linearVelocity = new Vector2(horizontal, vertical) * speed;
+        
+
+
     }
 
    public void Pause()

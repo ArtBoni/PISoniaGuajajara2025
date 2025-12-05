@@ -1264,6 +1264,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1ddac1044f11d2047b9642abe717a6d9, type: 3}
   - {fileID: 8300000, guid: 53aed2fa9abcd8442a946c72c32526e4, type: 3}
   audioSource: {fileID: 353191920}
+  spaceKey: {fileID: 0}
 --- !u!4 &1872238607
 Transform:
   m_ObjectHideFlags: 0
